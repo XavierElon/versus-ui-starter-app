@@ -1,38 +1,19 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Transition from './Transition';
+import ClickAwayListener from './ClickAwayListener'
 
-function Modal({
-  children,
-  id,
-  ariaLabel,
-  show,
-  handleClose
-}) {
+interface ModalProps {
+  children: any;
+  id: string;
+  ariaLabel: string;
+  show: boolean;
+  handleClose: () => void;
+}
+export const Modal = (props: ModalProps) => {
+const { children, id, ariaLabel, show, handleClose } = props;
 
   const modalContent = useRef(null);
-
-  // close the modal on click outside
-  useEffect(() => {
-    const clickHandler = ({ target }) => {
-      if (!show || modalContent.current.contains(target)) return;
-      handleClose();
-    };
-    document.addEventListener('click', clickHandler);
-    return () => document.removeEventListener('click', clickHandler);
-  });  
-
-  // close the modal if the esc key is pressed
-  useEffect(() => {
-    const keyHandler = ({ keyCode }) => {
-      if (keyCode !== 27) return;
-      handleClose();
-    };
-    document.addEventListener('keydown', keyHandler);
-
-    return () => document.removeEventListener('keydown', keyHandler);
-  });  
-
   return (
     <>
       {/* Modal backdrop */}
@@ -45,8 +26,7 @@ function Modal({
         leave="transition ease-out duration-100"
         leaveStart="opacity-100"
         leaveEnd="opacity-0"
-        aria-hidden="true"
-      />
+        aria-hidden="true" timeout={0} children={children}   />
 
       {/* Modal dialog */}
       <Transition
@@ -61,8 +41,7 @@ function Modal({
         enterEnd="opacity-100 scale-100"
         leave="transition ease-out duration-200"
         leaveStart="opacity-100 scale-100"
-        leaveEnd="opacity-0 scale-95"
-      >
+        leaveEnd="opacity-0 scale-95" timeout={0}      >
         <div className="bg-white overflow-auto max-w-6xl w-full max-h-full" ref={modalContent}>          
           {children}
         </div>
@@ -72,14 +51,3 @@ function Modal({
 }
 
 export default Modal;
-
-Modal.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.element),
-    PropTypes.element.isRequired
-  ]),
-  id: PropTypes.string,
-  ariaLabel: PropTypes.string,
-  show: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired
-};
