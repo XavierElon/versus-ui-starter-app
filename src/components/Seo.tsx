@@ -6,7 +6,7 @@ const defaultMeta = {
   title: 'Versus App',
   siteName: 'Versus App',
   description:
-    'Never Miss A Chance When Your Game Is At Its Pea',
+    'Never Miss A Chance When Your Game Is At Its Peak',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://versusapp.io',
   type: 'website',
