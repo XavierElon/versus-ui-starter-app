@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 
 function HeroHome() {
-  const [videoModalOpen, setVideoModalOpen] = useState(false)
-
   return (
     //make a simple hero section
     <section className="relative bg-white overflow-hidden dark:bg-black">

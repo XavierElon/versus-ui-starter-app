@@ -45,7 +45,7 @@ export function CSSTransition(props: TransitionProps) {
     <ReactTransition
       role={role}
       id={id}
-      enter={enter}
+      enter={enterFrom}
       leave={leave}
       leaveStart={leaveStart}
       leaveEnd={leaveEnd}
