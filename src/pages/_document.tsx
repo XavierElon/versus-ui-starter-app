@@ -15,18 +15,15 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='en'>  
+      <Html lang='en'className="bg-gray-300">
         <Head>
-          <meta charSet='utf-8' />
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
-          <meta name='theme-color' content='#000000' />
         </Head>
         <body>
           <Main />
           <NextScript />
+         
         </body>
       </Html>
-
     );
   }
 }
