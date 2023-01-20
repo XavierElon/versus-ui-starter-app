@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-/** @type {import('next').NextConfig} */
 const nextConfig = {
    images: {
         //configure "edamam-product-images.s3.amazonaws.com" and google auth 

@@ -21,7 +21,10 @@ function MyApp({
   return (
     <>
       <Head>
+        {/* https://nextjs.org/docs/messages/no-document-viewport-meta */}
         <link rel="shortcut icon" href="/favicon.ico" />
+          <meta charSet='utf-8' />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Toaster />
      <ThemeProvider enableSystem={true} attribute="class">
