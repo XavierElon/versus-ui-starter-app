@@ -17,7 +17,6 @@ class MyDocument extends Document {
     return (
       <Html lang='en'className="bg-gray-300">
         <Head>
-          <meta charSet='utf-8' />
         </Head>
         <body>
           <Main />

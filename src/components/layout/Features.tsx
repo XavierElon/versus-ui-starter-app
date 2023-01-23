@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Transition from '../Transition';
 
-import FeaturesBg from '../../public/images/features-bg.png';
-import FeaturesElement from '../../public/images/features-element.png';
 import Image from 'next/image';
 
 function Features() {
@@ -11,16 +9,15 @@ function Features() {
 
   const tabs = useRef(null);
 
-  const heightFix = () => {
+  const heightFix = (tabs) => {
     if (tabs.current.children[tab]) {
       tabs.current.style.height = tabs.current.children[tab - 1].offsetHeight + 'px'
     }
   }
 
   useEffect(() => {
-    heightFix()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [tab])
+    heightFix(tabs);
+  }, [tab]);
 
   return (
     <section className="relative">
@@ -101,52 +98,58 @@ function Features() {
                 {/* Item 1 */}
                 <Transition
                   show={tab === 1}
-                  appear={true}
                   className="w-full"
                   enter="transition ease-in-out duration-700 transform order-first"
                   enterStart="opacity-0 translate-y-16"
                   enterEnd="opacity-100 translate-y-0"
                   leave="transition ease-in-out duration-300 transform absolute"
                   leaveStart="opacity-100 translate-y-0"
-                  leaveEnd="opacity-0 -translate-y-16"
-                >
+                  leaveEnd="opacity-0 -translate-y-16" tag={undefined} timeout={0}               >
                   <div className="relative inline-flex flex-col">
-                    <img className="md:max-w-none mx-auto rounded" src={FeaturesBg} width="500" height="462" alt="Features bg" />
-                    <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width="500" height="44" alt="Element" style={{ top: '30%' }} />
+                    <img className="md:max-w-none mx-auto rounded" src={'/public/images/feature-bg.png'}
+                     width="500" height="462" alt="Features bg" />
+                    <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={
+                      '/public/images/features-element.png'
+                    } width="500" height="44" alt="Element" style={{ top: '30%' }} />
                   </div>
                 </Transition>
                 {/* Item 2 */}
                 <Transition
                   show={tab === 2}
-                  appear={true}
+
                   className="w-full"
                   enter="transition ease-in-out duration-700 transform order-first"
                   enterStart="opacity-0 translate-y-16"
                   enterEnd="opacity-100 translate-y-0"
                   leave="transition ease-in-out duration-300 transform absolute"
                   leaveStart="opacity-100 translate-y-0"
-                  leaveEnd="opacity-0 -translate-y-16"
-                >
+                  leaveEnd="opacity-0 -translate-y-16" tag={undefined} timeout={0}              >
                   <div className="relative inline-flex flex-col">
-                    <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width="500" height="462" alt="Features bg" />
-                    <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width="500" height="44" alt="Element" style={{ top: '30%' }} />
+                    <Image className="md:max-w-none mx-auto rounded" src={
+                      '/public/images/features-bg.png'
+                    } width="500" height="462" alt="Features bg" />
+                    <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={
+                      '/public/images/features-element.png'
+                    } width="500" height="44" alt="Element" style={{ top: '30%' }} />
                   </div>
                 </Transition>
                 {/* Item 3 */}
                 <Transition
                   show={tab === 3}
-                  appear={true}
                   className="w-full"
                   enter="transition ease-in-out duration-700 transform order-first"
                   enterStart="opacity-0 translate-y-16"
                   enterEnd="opacity-100 translate-y-0"
                   leave="transition ease-in-out duration-300 transform absolute"
                   leaveStart="opacity-100 translate-y-0"
-                  leaveEnd="opacity-0 -translate-y-16"
-                >
+                  leaveEnd="opacity-0 -translate-y-16" timeout={0}       >
                   <div className="relative inline-flex flex-col">
-                    <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width="500" height="462" alt="Features bg" />
-                    <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width="500" height="44" alt="Element" style={{ top: '30%' }} />
+                    <Image className="md:max-w-none mx-auto rounded" src={
+                      '/public/images/feature-bg.png'
+                    } width="500" height="462" alt="Features bg" />
+                    <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={
+                      '/public/images/features-element.png'
+                    } width="500" height="44" alt="Element" style={{ top: '30%' }} />
                   </div>
                 </Transition>
               </div>

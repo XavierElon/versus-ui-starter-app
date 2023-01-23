@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import Transition from './Transition';
 
 function Dropdown({
@@ -37,8 +36,7 @@ function Dropdown({
         enterEnd="opacity-100 translate-y-0"
         leave="transition ease-out duration-200"
         leaveStart="opacity-100"
-        leaveEnd="opacity-0"
-      >
+        leaveEnd="opacity-0" timeout={0}     >
         {children}
       </Transition>
     </li>
@@ -46,11 +44,3 @@ function Dropdown({
 }
 
 export default Dropdown;
-
-Dropdown.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.element),
-    PropTypes.element.isRequired
-  ]),
-  title: PropTypes.string.isRequired,
-};
