@@ -1,0 +1,49 @@
+{
+  "resources": [
+    {
+      "title": "Find me on Twitter",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/any"
+    },
+    {
+      "title": "Welcome to Ark Labs",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/animals"
+    },
+    {
+      "title": "Some sort of third title",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/architecture"
+    },
+    {
+      "title": "A personal site perhaps?",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/nature"
+    },
+    {
+      "title": "Super item number five",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/people"
+    },
+    {
+      "title": "Super item number six",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/tech"
+    },
+    {
+      "title": "Super item number seven",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/animals"
+    },
+    {
+      "title": "Super item number eight",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/people"
+    },
+    {
+      "title": "Super item number the last",
+      "link": "",
+      "imageUrl": "https://placeimg.com/300/300/tech"
+    }
+  ]
+}

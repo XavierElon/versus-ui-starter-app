@@ -5,6 +5,7 @@ import FeaturesHome from './Features';
 import FeaturesBlocks from './FeaturesBlocks';
 import Newsletter from './Newsletter';
 import Banner from './Banner';
+import Carousel from "../carousel/Carousel";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
         {/*  Page sections */}
         <HeroHome />
         <FeaturesHome />
+        <Carousel />
         <FeaturesBlocks />
         <Newsletter />
 

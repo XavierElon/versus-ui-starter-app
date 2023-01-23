@@ -13,8 +13,8 @@ function FeaturesBlocks() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">How Versus works</h2>
-            <p className="text-xl text-gray-600 dark:text-white">It's Simple. Stake, wager, or bet on which player you think will win.</p>
+            <h2 className="h2 mb-4">How Versus Works</h2>
+            <p className="text-xl text-gray-600 dark:text-white">It's Simple. Stake, Wager, Or Bet On Which Player You Think Will Win.</p>
           </div>
 
           {/* Items */}

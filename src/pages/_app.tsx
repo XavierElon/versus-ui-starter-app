@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import type { AppProps } from "next/app";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ToastContainer } from "react-toastify";
 import { Session } from "next-auth";
 import { ThemeProvider } from "next-themes";
@@ -29,7 +28,6 @@ function MyApp({
       <Toaster />
      <ThemeProvider enableSystem={true} attribute="class">
       <ToastContainer />
-      <ReactQueryDevtools initialIsOpen={false} />
        <SessionProvider session={pageProps.session}>
         <VolumeContextProvider>
           <Component {...pageProps} />

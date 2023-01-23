@@ -100,7 +100,7 @@ function Header() {
                        key={item.name}
                        href={item.href}
                        className={classNames(
-                         item.current ? ' text-black dark:text-white' : 'text-black hover:bg-white hover:text-black dark:text-white dark:hover:bg-gray-800 dark:hover:text-white',
+                         item.current ? ' text-black dark:text-white' : 'text-black hover:bg-red-600 hover:text-black dark:text-white dark:hover:bg-red-600 dark:hover:text-white',
                          'px-3 py-2 rounded-md text-sm font-medium'
                        )}
                        aria-current={item.current ? 'page' : undefined}
@@ -116,7 +116,7 @@ function Header() {
            {status === "unauthenticated" ? (
              <Link
                href="/sign-in"
-               className="rounded flex items-center gap-2 h-9 px-3 mr-28 bg-white hover:bg-black hover:text-white transition dark:bg-red-600 dark:hover:bg-white">
+               className="rounded flex items-center gap-2 h-9 px-3 mr-28 bg-white hover:bg-black hover:text-white transition dark:bg-red-600 dark:hover:bg-white dark:hover:text-black">
                
                  Log In
                
@@ -181,7 +181,7 @@ function Header() {
                {/* Profile dropdown */}
                <Menu as="div" className="relative ml-3">
                </Menu>
-                <div className="container pl-2 py-4 flex justify-between items-center">
+                <div className="container pl-2 py-4 mx-3 flex justify-between items-center">
              {renderThemeChanger()}
            </div>
 
@@ -190,7 +190,7 @@ function Header() {
            </div>
          </div>
 
-         <Disclosure.Panel className="sm:hidden">
+         <Disclosure.Panel className="sm:hidden bg-white rounded-2xl dark:bg-gray-800 opacity-1 mx-3">
            <div className="space-y-1 px-2 pt-2 pb-3">
              {navigation.map((item) => (
                <Disclosure.Button
@@ -198,7 +198,7 @@ function Header() {
                  as="a"
                  href={item.href}
                  className={classNames(
-                   item.current ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-white',
+                   item.current ? 'bg-red-600 text-white' : 'text-gray-900 hover:bg-black hover:text-white dark:text-white dark:hover:bg-black dark:hover:text-white',
                    'block px-3 py-2 rounded-md text-base font-medium'
                  )}
                  aria-current={item.current ? 'page' : undefined}
