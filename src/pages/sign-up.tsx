@@ -16,11 +16,11 @@ const SignUp: NextPage = () => {
         toast.error(errors[error] || error);
     }
   }, [error]);
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         // submit formData to server or perform other actions
     };
-    const handleDelete = (event) => {
+    const handleDelete = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         // submit formData to server or perform other actions
     };
@@ -92,7 +92,7 @@ const SignUp: NextPage = () => {
                           <button className="bg-red-600 text-white rounded-lg p-3 w-full">
                               Login With Google
                           </button>
-                          <button className="bg-black text-white rounded-lg p-3 w-full dark:bg-white dark:text-black">
+                          <button className="bg-zinc-900 text-white rounded-lg p-3 w-full dark:bg-white dark:text-zinc-900">
                               Login With Apple
                           </button>
 </div>
