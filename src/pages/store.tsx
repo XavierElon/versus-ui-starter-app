@@ -1,18 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
-export const StorePage = () => {
+export default function StorePage(){
     return (
         <>
-            <link
-                href="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088070860c7a9c67abb1fe1_ng-fav%20(1).png"
-                rel="shortcut icon"
-                type="image/x-icon"
-            />
-            <link
-                href="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608806d7990dc2369c574be1_ng-clip%20(1).png"
-                rel="apple-touch-icon"
-            />
             <div className="wrap">
                 <div className="store-header wf-section">
                     <div
@@ -2615,4 +2606,3 @@ export const StorePage = () => {
     )
 }
 
-export default StorePage;

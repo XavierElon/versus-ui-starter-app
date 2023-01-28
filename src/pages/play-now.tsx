@@ -1,59 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
-/* eslint-disable @next/next/no-img-element */
-export const AccountPage = () => {
+export default function PlayNow() {
     return (
-<>
-  <meta charSet="utf-8" />
-  <title>Account | Nextgen - Webflow HTML website template</title>
-  <meta
-    content="JUST THE MOST ADVANCED GAMING TEMPLATE. EVER. Nextgen Webflow template is an ultimate multi-purpose video game, entertainment, and eSports Webflow Template & UI Kit which is responsive, feature-rich, and easily customizable."
-    name="description"
-  />
-  <meta
-    content="Account | Nextgen - Webflow HTML website template"
-    property="og:title"
-  />
-  <meta
-    content="JUST THE MOST ADVANCED GAMING TEMPLATE. EVER. Nextgen Webflow template is an ultimate multi-purpose video game, entertainment, and eSports Webflow Template & UI Kit which is responsive, feature-rich, and easily customizable."
-    property="og:description"
-  />
-  <meta
-    content="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d9ce461b025ec86ca5f8a7_og-img%20(1).jpg"
-    property="og:image"
-  />
-  <meta
-    content="Account | Nextgen - Webflow HTML website template"
-    property="twitter:title"
-  />
-  <meta
-    content="JUST THE MOST ADVANCED GAMING TEMPLATE. EVER. Nextgen Webflow template is an ultimate multi-purpose video game, entertainment, and eSports Webflow Template & UI Kit which is responsive, feature-rich, and easily customizable."
-    property="twitter:description"
-  />
-  <meta
-    content="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d9ce461b025ec86ca5f8a7_og-img%20(1).jpg"
-    property="twitter:image"
-  />
-  <meta property="og:type" content="website" />
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <meta content="Webflow" name="generator" />
-  <link
-    href="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/css/next-gen.webflow.72504f242.min.css"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link
-    href="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088070860c7a9c67abb1fe1_ng-fav%20(1).png"
-    rel="shortcut icon"
-    type="image/x-icon"
-  />
-  <link
-    href="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608806d7990dc2369c574be1_ng-clip%20(1).png"
-    rel="apple-touch-icon"
-  />
+        <>
   <div className="wrap">
-    <div className="login-header wf-section">
+    <div className="buy-now-header-3 wf-section">
       <div
         data-collapse="medium"
         data-animation="default"
@@ -584,7 +536,8 @@ export const AccountPage = () => {
                         </Link>
                         <Link
                           href="/buy-now/var-3"
-                          className="nav-dropdown-link w-inline-block"
+                          aria-current="page"
+                          className="nav-dropdown-link w-inline-block w--current"
                         >
                           <div>Buy nOW 3</div>
                         </Link>
@@ -658,8 +611,7 @@ export const AccountPage = () => {
                         </Link>
                         <Link
                           href="/account"
-                          aria-current="page"
-                          className="nav-dropdown-link w-inline-block w--current"
+                          className="nav-dropdown-link w-inline-block"
                         >
                           <div>Account</div>
                         </Link>
@@ -695,11 +647,7 @@ export const AccountPage = () => {
                     alt=""
                   />
                 </Link>
-                <Link
-                  href="/account"
-                  aria-current="page"
-                  className="nav-link w-inline-block w--current"
-                >
+                <Link href="/account" className="nav-link w-inline-block">
                   <img
                     src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5f9af2cc613d21444310f3a7_icons8-account-100.png"
                     loading="lazy"
@@ -710,7 +658,8 @@ export const AccountPage = () => {
                 <div className="nav-action fs-0">
                   <Link
                     href="/buy-now/var-3"
-                    className="custom-button small white w-inline-block"
+                    aria-current="page"
+                    className="custom-button small white w-inline-block w--current"
                   >
                     <div className="custom-button-hover primary" />
                     <div className="corner-black bottom-right small" />
@@ -734,98 +683,462 @@ export const AccountPage = () => {
           </div>
         </div>
       </div>
-      <div className="login-header-container">
-        <div className="login-header-left">
-          <img
-            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608826b95a17a50556d15f9d_fps-hero-img%20(1).png"
-            loading="lazy"
-            width={500}
-            alt=""
-          />
-        </div>
-        <div className="login-header-right">
-          <div className="center-block _400">
-            <h5>CREATE ACCOUNT</h5>
-            <p className="text-extra-small text-black-opacity mb-40">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              suspendisse varius enim.
-            </p>
-            <div className="align-left w-form">
-              <form
-                id="email-form"
-                name="email-form"
-                data-name="Email Form"
-                method="get"
-              >
-                <label htmlFor="email" className="input-label">
-                  email
-                </label>
-                <input
-                  type="email"
-                  className="input custom w-input"
-                  maxLength={256}
-                  name="email"
-                  data-name="email"
-                  placeholder="Enter your email"
-                  id="email"
-                />
-                <label htmlFor="password" className="input-label">
-                  password
-                </label>
-                <input
-                  type="email"
-                  className="input custom w-input"
-                  maxLength={256}
-                  name="password"
-                  data-name="password"
-                  placeholder="Enter your password"
-                  id="password"
-                />
-                <div className="text-extra-small mb-10 text-center">
-                  <strong>YOU CAN ALSO CREATE AN ACCOUNT WITH:</strong>
-                </div>
-                <div className="row mb-20 w-row">
-                  <div className="w-col w-col-6">
-                    <Link
-                      href="https://www.google.com/"
-                      className="social-auth google w-inline-block"
-                    />
-                  </div>
-                  <div className="w-col w-col-6">
-                    <Link
-                      href="https://www.facebook.com/"
-                      className="social-auth facebook w-inline-block"
-                    />
-                  </div>
-                </div>
-                <label className="w-checkbox custom-checkbox-group mb-20">
-                  <div className="w-checkbox-input w-checkbox-input--inputType-custom custom-checkbox w--redirected-checked" />
-                  <input
-                    type="checkbox"
-                    id="checkbox"
-                    name="checkbox"
-                    data-name="Checkbox"
-                    style={{ opacity: 0, position: "absolute", zIndex: -1 }}
-                  />
-                  <span
-                    className="text-extra-small w-form-label"
-                  >
-                    Receive news, special offers, feedback surveys, and playtest
-                    invitations.
-                  </span>
-                </label>
-                <input
-                  type="submit"
-                  defaultValue="Create account"
-                  data-wait="Please wait..."
-                  className="submit-button w-button"
-                />
-              </form>
-              <div className="form-success w-form-done">
-                <div>Thank you! Your submission has been received!</div>
+      <div className="container">
+        <div className="section-inner white buy-now">
+          <div className="buy-now-inner-row">
+            <img
+              src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/609fd1882184673055ee792e_racing-game-dvd.jpg"
+              loading="lazy"
+              width={200}
+              sizes="(max-width: 479px) 67vw, 200px"
+              srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/609fd1882184673055ee792e_racing-game-dvd-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/609fd1882184673055ee792e_racing-game-dvd-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/609fd1882184673055ee792e_racing-game-dvd.jpg 818w"
+              alt=""
+            />
+            <div className="buy-now-inner-row-conent">
+              <h4 className="mb-0">NEXTGEN RACING</h4>
+              <div className="text-black-opacity text-small mb-10">
+                Nextgen Studios‬
               </div>
-              <div className="form-error w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
+              <div className="game-tags">
+                <div className="game-tags-item">
+                  <div className="text-highlight white mb-10 small">racing</div>
+                </div>
+                <div className="game-tags-item">
+                  <div className="text-highlight white mb-10 small">
+                    simulator
+                  </div>
+                </div>
+                <div className="game-tags-item">
+                  <div className="text-highlight white mb-10 small">
+                    multiplayer
+                  </div>
+                </div>
+              </div>
+              <p className="text-extra-small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo.{" "}
+              </p>
+              <ul role="list" className="text-small mb-0 w-list-unstyled">
+                <li>
+                  <strong>Publisher: </strong>NXTGN
+                </li>
+                <li>
+                  <strong>Platforms:</strong> PC / PS / XBOX
+                </li>
+                <li>
+                  <strong>Release date:</strong> Apr 25, 2022
+                  <br />
+                </li>
+              </ul>
+            </div>
+            <div className="buy-now-inner-row-buttons">
+              <Link
+                href="https://store.steampowered.com/"
+                className="buy-game-store steam w-inline-block"
+              />
+              <Link
+                href="https://www.epicgames.com/store/"
+                className="buy-game-store epic w-inline-block"
+              />
+              <Link
+                href="https://store.playstation.com/"
+                className="buy-game-store ps w-inline-block"
+              />
+              <Link
+                href="https://www.xbox.com/"
+                className="buy-game-store xbox w-inline-block"
+              />
+            </div>
+          </div>
+          <div className="corner-light bottom-right" />
+        </div>
+      </div>
+    </div>
+    <div className="section light buy-description wf-section">
+      <div className="container">
+        <div
+          data-duration-in={300}
+          data-duration-out={100}
+          data-current="Tab 1"
+          data-easing="ease"
+          className="w-tabs"
+        >
+          <div className="buy-now-tabs-menu w-tab-menu">
+            <Link
+                    data-w-tab="Tab 1"
+                    className="buy-now-tabs-menu-item w-inline-block w-tab-link w--current" href={""}            >
+              <div>Overview</div>
+            </Link>
+            <Link
+                    data-w-tab="Tab 2"
+                    className="buy-now-tabs-menu-item w-inline-block w-tab-link" href={""}            >
+              <div>System Requirements</div>
+            </Link>
+            <Link
+                    data-w-tab="Tab 3"
+                    className="buy-now-tabs-menu-item w-inline-block w-tab-link" href={""}            >
+              <div>Reviews</div>
+            </Link>
+          </div>
+          <div className="w-tab-content">
+            <div data-w-tab="Tab 1" className="w-tab-pane w--tab-active">
+              <h6>Available on:</h6>
+              <div className="hero-platforms mb-40">
+                <div className="hero-platform">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa19a81538a556f78baf748_playstation.svg"
+                    loading="lazy"
+                    height={20}
+                    alt=""
+                  />
+                </div>
+                <div className="hero-platform">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa19a9c5573bb85f7b1f330_xbox.svg"
+                    loading="lazy"
+                    height={20}
+                    alt=""
+                  />
+                </div>
+                <div className="hero-platform">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa19aa9fc1a045efff04026_windows.svg"
+                    loading="lazy"
+                    height={20}
+                    alt=""
+                  />
+                </div>
+              </div>
+              <h6>Description:</h6>
+              <div className="max-800 mb-40">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                  commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                  cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                  tristique posuere.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                  commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                  cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                  tristique posuere.
+                </p>
+              </div>
+              <h6 className="mb-20">Screenshots:</h6>
+              <div
+                data-delay={4000}
+                data-animation="slide"
+                className="slider buy-now mb-40 w-slider"
+                data-autoplay="false"
+                data-easing="ease"
+                data-hide-arrows="false"
+                data-disable-swipe="false"
+                data-autoplay-limit={0}
+                data-nav-spacing={3}
+                data-duration={500}
+                data-infinite="true"
+              >
+                <div className="w-slider-mask">
+                  <div className="w-slide">
+                    <div className="row w-row">
+                      <div className="w-col w-col-4">
+                        <Link href="#" className="mb-10 w-inline-block w-lightbox">
+                          <img
+                            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824830bdd451213cc171a_6075d609b8a74f7ae5c5fa37_moritz-spahn-opK7XLRXdLE-unsplashh%20(1).jpg"
+                            loading="lazy"
+                            sizes="100vw"
+                            srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824830bdd451213cc171a_6075d609b8a74f7ae5c5fa37_moritz-spahn-opK7XLRXdLE-unsplashh%20(1)-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824830bdd451213cc171a_6075d609b8a74f7ae5c5fa37_moritz-spahn-opK7XLRXdLE-unsplashh%20(1)-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824830bdd451213cc171a_6075d609b8a74f7ae5c5fa37_moritz-spahn-opK7XLRXdLE-unsplashh%20(1).jpg 2160w"
+                            alt=""
+                          />
+                        </Link>
+                      </div>
+                      <div className="w-col w-col-4">
+                        <Link href="#" className="mb-10 w-inline-block w-lightbox">
+                          <img
+                            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088249f0e7cd48e85db53f0_6077036ff8ee22402c3c32e3_serge-kutuzov-1K9-TbJWs2U-unsplashh%20(1).jpg"
+                            loading="lazy"
+                            sizes="100vw"
+                            srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088249f0e7cd48e85db53f0_6077036ff8ee22402c3c32e3_serge-kutuzov-1K9-TbJWs2U-unsplashh%20(1)-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088249f0e7cd48e85db53f0_6077036ff8ee22402c3c32e3_serge-kutuzov-1K9-TbJWs2U-unsplashh%20(1)-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088249f0e7cd48e85db53f0_6077036ff8ee22402c3c32e3_serge-kutuzov-1K9-TbJWs2U-unsplashh%20(1).jpg 2160w"
+                            alt=""
+                          />
+                        </Link>
+                      </div>
+                      <div className="w-col w-col-4">
+                        <Link href="#" className="mb-10 w-inline-block w-lightbox">
+                          <img
+                            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1).jpg"
+                            loading="lazy"
+                            sizes="100vw"
+                            srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1)-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1)-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1)-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1)-p-2000.jpeg 2000w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1).jpg 2160w"
+                            alt=""
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-slide">
+                    <div className="row w-row">
+                      <div className="w-col w-col-4">
+                        <Link href="#" className="mb-10 w-inline-block w-lightbox">
+                          <img
+                            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1).jpg"
+                            loading="lazy"
+                            sizes="100vw"
+                            srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1)-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1)-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1)-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1)-p-2000.jpeg 2000w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824ae0ed9271dd7e974c1_6077038a8c565039bc3ddf5d_macau-photo-agency-UhQSjxHb3mk-unsplashh%20(1).jpg 2160w"
+                            alt=""
+                          />
+                        </Link>
+                      </div>
+                      <div className="w-col w-col-4">
+                        <Link href="#" className="mb-10 w-inline-block w-lightbox">
+                          <img
+                            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824830bdd451213cc171a_6075d609b8a74f7ae5c5fa37_moritz-spahn-opK7XLRXdLE-unsplashh%20(1).jpg"
+                            loading="lazy"
+                            sizes="100vw"
+                            srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824830bdd451213cc171a_6075d609b8a74f7ae5c5fa37_moritz-spahn-opK7XLRXdLE-unsplashh%20(1)-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824830bdd451213cc171a_6075d609b8a74f7ae5c5fa37_moritz-spahn-opK7XLRXdLE-unsplashh%20(1)-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/608824830bdd451213cc171a_6075d609b8a74f7ae5c5fa37_moritz-spahn-opK7XLRXdLE-unsplashh%20(1).jpg 2160w"
+                            alt=""
+                          />
+                        </Link>
+                      </div>
+                      <div className="w-col w-col-4">
+                        <Link href="#" className="mb-10 w-inline-block w-lightbox">
+                          <img
+                            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088249f0e7cd48e85db53f0_6077036ff8ee22402c3c32e3_serge-kutuzov-1K9-TbJWs2U-unsplashh%20(1).jpg"
+                            loading="lazy"
+                            sizes="100vw"
+                            srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088249f0e7cd48e85db53f0_6077036ff8ee22402c3c32e3_serge-kutuzov-1K9-TbJWs2U-unsplashh%20(1)-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088249f0e7cd48e85db53f0_6077036ff8ee22402c3c32e3_serge-kutuzov-1K9-TbJWs2U-unsplashh%20(1)-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6088249f0e7cd48e85db53f0_6077036ff8ee22402c3c32e3_serge-kutuzov-1K9-TbJWs2U-unsplashh%20(1).jpg 2160w"
+                            alt=""
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="arrow-left-bottom w-slider-arrow-left" />
+                <div className="arrow-right-bottom w-slider-arrow-right" />
+                <div className="hidden w-slider-nav w-round" />
+              </div>
+              <h6 className="mb-20">Trailer:</h6>
+              <div className="max-500 mb-40">
+                <div
+                  style={{ paddingTop: "56.17021276595745%" }}
+                  className="w-embed-youtubevideo"
+                >
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/bHWgc5MPnPA?rel=0&controls=0&autoplay=0&mute=0&start=0"
+                    frameBorder={0}
+                    style={{
+                      position: "absolute",
+                      left: 0,
+                      top: 0,
+                      width: "100%",
+                      height: "100%",
+                      pointerEvents: "auto"
+                    }}
+                    allow="autoplay; encrypted-media"
+                    title="Bugatti Vision GT vs Super Cars at Highlands"
+                  />
+                </div>
+              </div>
+              <h6 className="mb-20">Additional content:</h6>
+              <div className="max-800 mb-40">
+                <div className="buy-now-addon">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/609fd1882184673055ee792e_racing-game-dvd.jpg"
+                    loading="lazy"
+                    width={160}
+                    sizes="(max-width: 479px) 67vw, 160px"
+                    srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/609fd1882184673055ee792e_racing-game-dvd-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/609fd1882184673055ee792e_racing-game-dvd-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/609fd1882184673055ee792e_racing-game-dvd.jpg 818w"
+                    alt=""
+                  />
+                  <div className="buy-now-addon-content">
+                    <div className="text-highlight primary small mb-10">
+                      Add-on
+                    </div>
+                    <h5>Nextgen Racing - Season Pass</h5>
+                    <p className="text-small text-black-opacity mb-0">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique. Duis
+                      cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                      ut commodo diam libero vitae erat.
+                    </p>
+                    <div className="corner-light bottom-right" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-w-tab="Tab 2" className="w-tab-pane">
+              <div className="row w-row">
+                <div className="mobile-mb-20 w-col w-col-6">
+                  <h6>MINIMUM</h6>
+                  <ul
+                    role="list"
+                    className="text-small text-black-opacity mb-0 w-list-unstyled"
+                  >
+                    <li>OS: 64-bit Windows 7, Windows 8.1 and Windows 10</li>
+                    <li>Processor: AMD FX-8350 or Intel Core i5 6600K</li>
+                    <li>Memory: 8GB RAM</li>
+                    <li>
+                      Graphics card: NVIDIA GeForce® GTX 660 2GB or AMD Radeon™
+                      RX 560 2GB
+                      <br />
+                    </li>
+                    <li>DirectX: 11.0 Compatible video card or equivalent</li>
+                    <li>
+                      Online Connection Requirements: 512 KBPS or faster
+                      Internet connection
+                    </li>
+                    <li>Hard-drive space: 50GB</li>
+                  </ul>
+                </div>
+                <div className="w-col w-col-6">
+                  <h6>RECOMMENDED</h6>
+                  <ul
+                    role="list"
+                    className="text-small text-black-opacity mb-0 w-list-unstyled"
+                  >
+                    <li>OS: 64-bit Windows 7, Windows 8.1 and Windows 10</li>
+                    <li>Processor: AMD Ryzen 3 1300X or Intel Core i7 4790</li>
+                    <li>Memory: 12GB RAM</li>
+                    <li>
+                      Graphics card: NVIDIA GeForce® GTX 1060 6GB or AMD Radeon™
+                      RX 580 8GB
+                      <br />
+                    </li>
+                    <li>DirectX: 11.0 Compatible video card or equivalent</li>
+                    <li>
+                      Online Connection Requirements: 512 KBPS or faster
+                      Internet connection
+                    </li>
+                    <li>Hard-drive space: 50GB</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div data-w-tab="Tab 3" className="w-tab-pane">
+              <div className="row flex full mb-40 w-row">
+                <div className="w-col w-col-4">
+                  <div className="feedback-card small white">
+                    <div className="feedback-card-header">
+                      <div className="feedback-card-score">10</div>
+                      <div>
+                        <div className="text-large">
+                          <strong>Game Insider</strong>
+                        </div>
+                        <div className="text-extra-small text-black-opacity">
+                          Mar 31, 2021
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-small mb-20">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique. Duis
+                      cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                      ut commodo diam libero vitae erat. Aenean faucibus nibh et
+                      justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae
+                      risus tristique posuere.
+                    </p>
+                    <div className="feedback-card-footer">
+                      <div className="text-extra-small text-black-opacity">
+                        <strong>Full review:</strong>
+                      </div>
+                      <Link href="/" className="feedback-link w-inline-block">
+                        <img
+                          src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6074717a07fbbb426e350766_gameinsider.svg"
+                          loading="lazy"
+                          height={20}
+                          alt=""
+                        />
+                      </Link>
+                    </div>
+                    <div className="corner-light bottom-right" />
+                  </div>
+                </div>
+                <div className="w-col w-col-4">
+                  <div className="feedback-card small white">
+                    <div className="feedback-card-header">
+                      <div className="feedback-card-score">9</div>
+                      <div>
+                        <div className="text-large">
+                          <strong>PixelMeta</strong>
+                        </div>
+                        <div className="text-extra-small text-black-opacity">
+                          Mar 12, 2021
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-small mb-20">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique. Duis
+                      cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                      ut commodo diam libero vitae erat. Aenean faucibus nibh et
+                      justo cursus id rutrum lorem imperdiet.
+                    </p>
+                    <div className="feedback-card-footer">
+                      <div className="text-extra-small text-black-opacity">
+                        <strong>Full review:</strong>
+                      </div>
+                      <Link href="/" className="feedback-link w-inline-block">
+                        <img
+                          src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6074720e4f4e2b367269ae75_pixelmeta.svg"
+                          loading="lazy"
+                          height={20}
+                          alt=""
+                        />
+                      </Link>
+                    </div>
+                    <div className="corner-light bottom-right" />
+                  </div>
+                </div>
+                <div className="w-col w-col-4">
+                  <div className="feedback-card small white">
+                    <div className="feedback-card-header">
+                      <div className="feedback-card-score">8</div>
+                      <div>
+                        <div className="text-large">
+                          <strong>GDN</strong>
+                        </div>
+                        <div className="text-extra-small text-black-opacity">
+                          Mar 25, 2021
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-small mb-20">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique. Duis
+                      cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                      ut commodo diam libero vitae erat.{" "}
+                    </p>
+                    <div className="feedback-card-footer">
+                      <div className="text-extra-small text-black-opacity">
+                        <strong>Full review:</strong>
+                      </div>
+                      <Link href="/" className="feedback-link w-inline-block">
+                        <img
+                          src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/6074726041a8c066c7b0ef1b_gdn.svg"
+                          loading="lazy"
+                          height={20}
+                          alt=""
+                        />
+                      </Link>
+                    </div>
+                    <div className="corner-light bottom-right" />
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <Link href="#" className="custom-button primary w-inline-block">
+                  <div className="custom-button-hover black" />
+                  <div className="corner-light bottom-right small" />
+                  <div className="corner-light top-left small" />
+                  <div className="custom-button-text">View all Reviews</div>
+                </Link>
               </div>
             </div>
           </div>
@@ -942,6 +1255,6 @@ export const AccountPage = () => {
     </div>
   </div>
 </>
-    )}
+    )
+}
 
-export default AccountPage;
