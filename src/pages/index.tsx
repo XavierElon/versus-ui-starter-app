@@ -1,715 +1,30 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable @next/next/no-img-element */
+import Header from "@/components/Header";
 import Link from "next/link";
-
+import {AiFillYoutube,AiFillTwitterCircle,AiFillFacebook} from "react-icons/ai";
+import {BsTwitch} from "react-icons/bs";
+import { FaPlaystation } from "react-icons/fa";
 
 export default function DashboardLayout() {
   return (
     <>
-  <div className="wrap">
-    <div className="header-shooter mb-20 wf-section">
-      <div
-        data-collapse="medium"
-        data-animation="default"
-        data-duration={400}
-        data-easing="ease"
-        data-easing2="ease"
-        role="banner"
-        className="navbar w-nav"
-      >
-        <div className="navbar-container">
-          <div className="navbar-container-left">
-            <Link href="/" className="navbar-brand company w-nav-brand">
-              {/* Logo will be here */}
-            </Link>
-            <Link href="/" className="navbar-brand game w-nav-brand">
-                  <h1 className="font-24 text-white">Versus</h1>
-            </Link>
-            <nav role="navigation" className="nav-menu w-nav-menu">
-                          <div>
-                <div data-hover="false" data-delay={0} className="w-dropdown">
-                  <div className="nav-link dropdown w-dropdown-toggle">
-                    <div className="nav-link-dropdown-icon w-icon-dropdown-toggle" />
-                    <div>Games</div>
-                  </div>
-                  <nav className="nav-dropdown-games-list w-dropdown-list">
-                    <div className="container">
-                      <div className="align-right mb-10">
-                        <Link href="/store" className="link text-extra-small">
-                          Browse all games
-                        </Link>
-                      </div>
-                      <div
-                        data-delay={4000}
-                        data-animation="slide"
-                        className="slider games-nav-slider w-slider"
-                        data-autoplay="false"
-                        data-easing="ease"
-                        data-hide-arrows="false"
-                        data-disable-swipe="false"
-                        data-autoplay-limit={0}
-                        data-nav-spacing={3}
-                        data-duration={500}
-                        data-infinite="true"
-                      >
-                       
-                        <div className="w-slider-mask">
-                          <div className="w-slide">
-                            <div className="row w-row">
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/fps"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a521296c627b950f5cf3e7_games-fps.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">FPS</div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f06a2880cdb812caf7a30_ps.svg"
-                                      loading="lazy"
-                                      width={16}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f0875290455e5598ffd6f_xbox.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/shooter"
-                                  aria-current="page"
-                                  className="games-item nav w-inline-block w--current"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52129c906ef5f0e1c08a0_games-shooter.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      Shooter
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f06a2880cdb812caf7a30_ps.svg"
-                                      loading="lazy"
-                                      width={16}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f0875290455e5598ffd6f_xbox.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/mmo"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52127dc29ed24367afab6_games-mmo.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      MMORPG
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/rpg"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a5212982e1ccb14583cfc8_games-rpg.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">RPG</div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f06a2880cdb812caf7a30_ps.svg"
-                                      loading="lazy"
-                                      width={16}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/moba"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52128334f2d6c0b73b0dd_games-moba.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">MOBA</div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f0875290455e5598ffd6f_xbox.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/survival"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a5212a130594391a49a4fd_games-survive.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      Survival
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f06a2880cdb812caf7a30_ps.svg"
-                                      loading="lazy"
-                                      width={16}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f0875290455e5598ffd6f_xbox.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="w-slide">
-                            <div className="row w-row">
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/sport"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52129334f2d6fe673b0de_games-sport.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      Sport
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f06a2880cdb812caf7a30_ps.svg"
-                                      loading="lazy"
-                                      width={16}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f0875290455e5598ffd6f_xbox.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/racing"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52128a303e845c4c3589f_games-racing.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      Racing
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f06a2880cdb812caf7a30_ps.svg"
-                                      loading="lazy"
-                                      width={16}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f0875290455e5598ffd6f_xbox.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/horror"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a521289883839064a433b7_games-horror.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      Horror
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f06a2880cdb812caf7a30_ps.svg"
-                                      loading="lazy"
-                                      width={16}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/strategy"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52129ec00f7bf892ffb62_games-strategy.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      Strategy
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/indie-platformer"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a521286c627bb4875cf3e6_games-indie.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      Platformer
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                              <div className="w-col w-col-2 w-col-medium-4 w-col-small-6 w-col-tiny-6">
-                                <Link
-                                  href="/games/mobile"
-                                  className="games-item nav w-inline-block"
-                                >
-                                  <img
-                                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52128356bb7e9f7f69e16_games-mobile.jpg"
-                                    loading="lazy"
-                                    sizes="100vw"
-                                    srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52128356bb7e9f7f69e16_games-mobile-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52128356bb7e9f7f69e16_games-mobile-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a52128356bb7e9f7f69e16_games-mobile.jpg 818w"
-                                    alt=""
-                                  />
-                                  <div className="nav-games-name">
-                                    <div className="text-extra-small">
-                                      Mobile
-                                    </div>
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/606f0875290455e5598ffd6f_xbox.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                    <img
-                                      src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d353068c89bbb0661f5b1d_windows.svg"
-                                      loading="lazy"
-                                      width={14}
-                                      alt=""
-                                      className="mr-5"
-                                    />
-                                  </div>
-                                  <div className="games-item-hover" />
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="nav-slider-arrow left w-slider-arrow-left">
-                          <div className="nav-slider-arrow-iocn w-icon-slider-left" />
-                        </div>
-                        <div className="nav-slider-arrow right w-slider-arrow-right">
-                          <div className="nav-slider-arrow-iocn w-icon-slider-right" />
-                        </div>
-                        <div className="hidden w-slider-nav w-round" />
-                      </div>
-                    </div>
-                  </nav>
-                </div>
-                <div data-hover="false" data-delay={0} className="w-dropdown">
-                  <div className="nav-link dropdown w-dropdown-toggle">
-                  </div>
-                  <nav className="nav-dropdown w-dropdown-list">
-                    <Link
-                      href="/about/heroes"
-                      className="nav-dropdown-link w-inline-block"
-                    >
-                      <div>Heroes</div>
-                    </Link>
-                    <Link
-                      href="/about/weapon"
-                      className="nav-dropdown-link w-inline-block"
-                    >
-                      <div>Weapon</div>
-                    </Link>
-                    <Link
-                      href="/about/character"
-                      className="nav-dropdown-link w-inline-block"
-                    >
-                      <div>CHaracters</div>
-                    </Link>
-                    <Link
-                      href="/about/maps"
-                      className="nav-dropdown-link w-inline-block"
-                    >
-                      <div>MAPS</div>
-                    </Link>
-                    <Link
-                      href="/about/game-modes"
-                      className="nav-dropdown-link w-inline-block"
-                    >
-                      <div>Game Modes</div>
-                    </Link>
-                    <Link
-                      href="/about/features"
-                      className="nav-dropdown-link w-inline-block"
-                    >
-                      <div>FEATURES</div>
-                    </Link>
-                  </nav>
-                </div>
-                <Link href="/about-us" className="nav-link w-nav-link">
-                  Company
-                </Link>
-                <div data-hover="false" data-delay={0} className="w-dropdown">
-                  <div className="nav-link dropdown w-dropdown-toggle">
-                  </div>
-                  <nav className="nav-dropdown large w-dropdown-list">
-                    <div className="row w-row">
-                      <div className="w-col w-col-6">
-                        <Link
-                          href="/buy-now/var-1"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Buy Now 1</div>
-                        </Link>
-                        <Link
-                          href="/buy-now/var-2"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Buy Now 2</div>
-                        </Link>
-                        <Link
-                          href="/buy-now/var-3"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Buy nOW 3</div>
-                        </Link>
-                        <Link
-                          href="/season"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Season</div>
-                        </Link>
-                        <Link
-                          href="/battle-pass"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Battle pass</div>
-                        </Link>
-                        <Link
-                          href="/patch-notes"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Patch notes</div>
-                        </Link>
-                        <Link
-                          href="/style-guide"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Style guide</div>
-                        </Link>
-                        <Link
-                          href="/404"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>404</div>
-                        </Link>
-                        <Link
-                          href="/401"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Password</div>
-                        </Link>
-                      </div>
-                      <div className="w-col w-col-6">
-                        <Link
-                          href="/team"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Team/Clan</div>
-                        </Link>
-                        <Link
-                          href="/download"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Download</div>
-                        </Link>
-                        <Link
-                          href="/specs"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>PC SPECS</div>
-                        </Link>
-                        <Link
-                          href="/store"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Store</div>
-                        </Link>
-                        <Link
-                          href="/store-game"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Store game</div>
-                        </Link>
-                        <Link
-                          href="/account"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Account</div>
-                        </Link>
-                        <Link
-                          href="/image-licensing"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Licensing</div>
-                        </Link>
-                        <Link
-                          href="/search"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Search Result</div>
-                        </Link>
-                        <Link
-                          href="/"
-                          className="nav-dropdown-link w-inline-block"
-                        >
-                          <div>Template Info</div>
-                        </Link>
-                      </div>
-                    </div>
-                  </nav>
-                </div>
-              </div>
-              <div className="navbar-container-right">
-                <Link href="/store" className="nav-link w-inline-block">
-                  <img
-                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60955bdd15d0e1617c77edb8_icons8-shopping-cart-100.png"
-                    loading="lazy"
-                    width={25}
-                    alt=""
-                  />
-                </Link>
-                <Link href="/account" className="nav-link w-inline-block">
-                  <img
-                    src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5f9af2cc613d21444310f3a7_icons8-account-100.png"
-                    loading="lazy"
-                    width={25}
-                    alt=""
-                  />
-                </Link>
-                <div className="nav-action fs-0">
-                  <Link
-                    href="/buy-now/var-3"
-                    className="custom-button small white w-inline-block"
-                  >
-                    <div className="custom-button-hover primary" />
-                    <div className="corner-black bottom-right small" />
-                    <div className="corner-black top-left small" />
-                    <div className="custom-button-text">PLAY NOW</div>
-                  </Link>
-                </div>
-              </div>
-            </nav>
-            <div className="menu-button-container">
-              <div className="menu-button w-nav-button">
-                <img
-                  src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d5cfaf6fd9b785bd509105_icons8-squared-menu-100.png"
-                  loading="lazy"
-                  width={20}
-                  alt=""
-                  className="menu-button-icon"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Header />
+      <div className="wrap">
+             <div className="header-shooter mb-20 wf-section">
       <div className="container">
         <div className="center-block mb-60">
           <div className="text-highlight primary mb-40">APRIL 25TH, 2025</div>
-          <img
-            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5f3a999de7bab841a0c0a9b3_logo%20text.svg"
-            loading="lazy"
-            width={800}
-            alt=""
-            className="mb-60"
-          />
+         {/* an Image for versus here */}
           <h5 className="text-white mb-40">
-            NEXTGEN SHOOTER - FREE TO PLAY FOR EVERYONE ON XBOX, PS4 AND PC
+             The Next Evolution of Competitive Gaming
           </h5>
           <div className="button-group">
             <Link href="/download" className="button primary mb-20 large w-button">
               Download now
             </Link>
           </div>
-          <div className="hero-platforms center">
-            <div className="hero-platform">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fb26c3d14abe4a3f12893ec_playstation-white.svg"
-                loading="lazy"
-                height={20}
-                alt=""
-              />
-            </div>
-            <div className="hero-platform">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fb26c462dfa890a3169a9e5_xbox-white.svg"
-                loading="lazy"
-                height={20}
-                alt=""
-              />
-            </div>
-            <div className="hero-platform">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fb26c4ca0fbc0b4d90937af_windows-white.svg"
-                loading="lazy"
-                height={20}
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
     </div>
     <div className="section pt-0 wf-section">
@@ -722,10 +37,7 @@ export default function DashboardLayout() {
             OF GAMING
           </h2>
           <p className="text-white-opacity text-large mb-40">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat.
+            Versus allows users to play for real earnings. Players will compete against their rivals in solo head-to-head matches, team versus team events, and tournaments. Play with friends, earn, and experience the excitement of competitive gaming.
           </p>
         </div>
         <div className="gamemodes-slides-container">
@@ -970,7 +282,7 @@ export default function DashboardLayout() {
       <div className="container">
         <div className="flex-columns row w-row">
           <div className="w-col w-col-5">
-            <h3 className="text-white">SEASON SIX IS AVAILABLE NOW</h3>
+            <h3 className="text-white">Season One Is Coming Soon</h3>
             <img
               src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa58a341465890b77ce63ba_divider.svg"
               loading="lazy"
@@ -978,8 +290,8 @@ export default function DashboardLayout() {
               className="mb-20"
             />
             <div className="text-white-opacity mb-40">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
+                  Get Reacy for the first Season of Versus, be one of the first to
+                  play and build the future of competitive gaming.
             </div>
             <Link href="/season" className="button white w-button">
               Learn More
@@ -1099,10 +411,9 @@ export default function DashboardLayout() {
               className="mb-20"
             />
             <div className="text-white-opacity mb-40">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
+                  The first players to purchase the Battle Pass will receive the
+                  exclusive in game item, the “Battle Pass” banner. This banner
+                  will be available to all players who purchase the Battle Pass. Along with the Battle Pass, players will receive a mystery item from the Battle Pass collection.
             </div>
             <Link
               href="/battle-pass"
@@ -1111,7 +422,7 @@ export default function DashboardLayout() {
               <div className="custom-button-hover white" />
               <div className="corner-black small top-left" />
               <div className="corner-black small bottom-right" />
-              <div className="custom-button-text">PurCHASE</div>
+              <div className="custom-button-text">Purchase</div>
             </Link>
           </div>
         </div>
@@ -1195,8 +506,7 @@ export default function DashboardLayout() {
               className="mb-20"
             />
             <div className="text-white-opacity mb-40">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
+             Join other players all over the world to competive in the best, new, competive gaming platform...
             </div>
             <Link
               href="/buy-now/var-2"
@@ -1299,7 +609,7 @@ export default function DashboardLayout() {
                 className="mb-20"
               />
               <p className="text-white text-extra-small">
-                Sign up today to receive the latest Nextgen™ news, updates,
+                Sign up today to receive the latest Versus news, updates,
                 offers, and more by email.
               </p>
             </div>
@@ -1326,7 +636,7 @@ export default function DashboardLayout() {
                     <div className="corner-black small bottom-left" />
                   </div>
                   <div className="text-extra-small text-white mb-20 text-white-opacity">
-                    Nextgen will be responsible for your personal data. For more
+                    Versus will be responsible for your personal data. For more
                     information please check our{" "}
                     <Link target="_blank" href="/">
                       Privacy Policy
@@ -1346,7 +656,7 @@ export default function DashboardLayout() {
                           className="text-extra-small text-white-opacity w-form-label"
                     >
                       I would like to receive news, special offers and other
-                      information from Nextgen and I am 16 years old or older.
+                      information from Versus and I am 16 years old or older.
                     </span>
                   </label>
                   <div>
@@ -1399,12 +709,7 @@ export default function DashboardLayout() {
           </div>
           <div className="w-col w-col-9">
             <p className="text-extra-small align-left text-white-opacity mb-10">
-              Nextgen, NXGN Studios, Inc. All Rights Reserved. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-              eros elementum tristique. Duis cursus, mi quis viverra ornare,
-              eros dolor interdum nulla, ut commodo diam libero vitae erat.
-              Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
-              Nunc ut sem vitae risus tristique posuere.
+              Versus, Inc. Are You Ready To Compete With Players From All Over The World? Join Our Community And Become A Part Of The Best Gaming Experience Ever!
             </p>
           </div>
         </div>
@@ -1412,25 +717,17 @@ export default function DashboardLayout() {
         <div className="footer-links">
           <div className="footer-lonks-left">
             <Link href="/" className="footer-logo w-inline-block">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5f9ae92236f0d952faf1cf43_nextgen-simple.svg"
-                loading="lazy"
-                width={40}
-                alt=""
-              />
+              {/* Logo here */}
             </Link>
-            <Link href="https://craftengine.co/contact" className="footer-link">
+            <Link href="" className="footer-link">
               Support
             </Link>
-            <Link href="https://craftengine.co/" className="footer-link">
+            <Link href="" className="footer-link">
               About us
             </Link>
             <Link href="/image-licensing" className="footer-link">
               licensing
               <br />
-            </Link>
-            <Link href="https://webflow.com/" className="footer-link">
-              Powered by webflow
             </Link>
           </div>
           <div className="subscribe-socials community align-right">
@@ -1438,51 +735,33 @@ export default function DashboardLayout() {
               href="https://www.youtube.com/"
               className="footer-social footer-link w-inline-block"
             >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c43ea304032245df757_icons8-youtube-play-button-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
+               <AiFillYoutube />
             </Link>
             <Link
               href="https://www.twitch.tv/"
               className="footer-social footer-link w-inline-block"
             >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c5404fb834cc977640e_icons8-twitch-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
+            <BsTwitch />
             </Link>
             <Link
               href="https://www.facebook.com/"
               className="footer-social footer-link w-inline-block"
             >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c64a652432bdcc3866f_icons8-facebook-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
+              <AiFillFacebook />
             </Link>
             <Link
               href="https://twitter.com/"
               className="footer-social footer-link w-inline-block"
             >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c70b10647f095430039_icons8-twitter-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
+              <AiFillTwitterCircle
               />
             </Link>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+        </div>
+      </div>
+      
 </>
   );
 }

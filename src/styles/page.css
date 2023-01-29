@@ -4335,11 +4335,13 @@ figcaption {
 }
 
 .header-shooter {
+
     position: relative;
     overflow: hidden;
+    margin-top: 100px;
     padding-top: 200px;
     padding-bottom: 100px;
-    background-image: url("https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60955a6360bb2869dd29c69c_shooter-bg.jpg");
+    background-image: ("/images/shooter.png");
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat
