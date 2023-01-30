@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-   { name: 'Company', href: '/about-us', current: false }
+   { name: 'SignUp', href: '/sign-up', current: false }
 ]
 function classNames(...classes: unknown[]) {
   return classes.filter(Boolean).join(' ')
@@ -29,20 +29,16 @@ function Header() {
   }, [])
 
   return (
-      <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-zinc-900 text-zinc-400 hover:text-white backdrop-blur-sm shadow-lg'}`}>
-    <>
-              <Disclosure as="nav" className="bg-zinc-900 text-zinc-400"> 
-                 
-                  
-                          
-                  {({ open }) => (
-                      
-                      <>
-         <div className="mx-auto max-w-7xl px-2 lg:px-8">
+     <>
+          <Disclosure as="nav" className="bg-zinc-900">
+     {({ open }) => (
+       <>
+         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
            <div className="relative flex h-16 items-center justify-between">
-             <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
+                              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                                  
                {/* Mobile menu button*/}
-               <Disclosure.Button className="inline-flex items-center justify-center p-2 text-zinc-400 hover:text-white focus:outline-none">
+               <Disclosure.Button className="inline-flex items-center justify-center p-2 text-zinc-400 hover:bg-zinc-900 hover:text-white focus:outline-none dark:text-white">
                  <span className="sr-only">Open main menu</span>
                  {open ? (
                                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="block h-6 w-6">
@@ -53,36 +49,13 @@ function Header() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                           </svg>
                  )}
-               </Disclosure.Button>
+                                  </Disclosure.Button>
+                                  
                 </div>
-                                  <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-end">
-                                      <div className="absolute top-1 right-0">
-                          <Link
-              href="/sign-up"
-              className="custom-button primary w-inline-block"
-            >
-              <div className="custom-button-hover white" />
-              <div className="corner-dark top-left small" />
-              <div className="corner-dark bottom-right small" />
-              <div className="custom-button-text">Play now</div>
-                                      </Link>
-                                        </div>
-                        
-                                      <div className="flex-shrink-0 flex justify-center items-center mt-2 space-x-6">
-                                          <Link href="/">
-                                                <p className="text-zinc-400 font-medium hover:text-white">
-                                                  Home
-                                              </p>
-                                          </Link>
-                                      
-                                          <Link href="/about">
-                                                <p className="text-zinc-400 font-medium hover:text-white">
-                                                  Company
-                                              </p>
-                                          </Link>
-                                      </div>
-                                    </div>
-                                    
+                
+              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <h1 className="text-3xl ml-8 flex justify-left items-center font-bold text-zinc-900 dark:text-white">Versus </h1>
+          </div>
                   <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
          
                <div className="hidden sm:ml-6 sm:block">
@@ -92,7 +65,7 @@ function Header() {
                        key={item.name}
                        href={item.href}
                        className={classNames(
-                         item.current ? 'text-white' : 'text-zinc-400 hover:text-white ',
+                         item.current ? ' text-zinc-900 dark:text-white' : 'text-zinc-900 hover:bg-red-600 hover:text-zinc-900 dark:text-white dark:hover:bg-red-600 dark:hover:text-white',
                          'px-3 py-2 rounded-md text-sm font-medium'
                        )}
                        aria-current={item.current ? 'page' : undefined}
@@ -106,19 +79,24 @@ function Header() {
              </div>
             
              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-             
-               <Menu as="div" className="relative ml-3">
-               </Menu>
-                <div className="container pl-2 py-4 mx-3 flex justify-between items-center">
-
-           </div>
-
-             </div>
-           
-           </div>
+               <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-end">
+                    <div className="lg:block lg:ml-4">
+                          <Link
+              href="/sign-up"
+              className="custom-button primary w-inline-block"
+            >
+              <div className="custom-button-hover white" />
+              <div className="corner-dark top-left small" />
+              <div className="corner-dark bottom-right small" />
+             <div className="custom-button-text">Play now</div>
+            </Link>
+                                      </div>
+                                  </div>
+                              </div>
+                    </div>          
          </div>
 
-         <Disclosure.Panel className="sm:hidden bg-zinc-900 ">
+              <Disclosure.Panel className="sm:hidden bg-zinc-900 ">
            <div className="space-y-1 px-2 pt-2 pb-3 border-t border-b border-zinc-400">
              {navigation.map((item) => (
                <Disclosure.Button
@@ -142,7 +120,6 @@ function Header() {
      )}
       </Disclosure>
       </>
-    </header>
   );
 }
 
