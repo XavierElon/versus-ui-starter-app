@@ -1,8 +1,6 @@
 import "../styles/globals.css";
 import "../styles/page.css";
-import "../styles/aboutus.css"
-import "../styles/playnow.css"
-import "../styles/store.css";
+
 import type { AppProps } from "next/app";
 import React from "react";
 import Seo from "@/components/Seo";

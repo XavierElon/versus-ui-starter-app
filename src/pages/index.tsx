@@ -709,7 +709,7 @@ export default function DashboardLayout() {
           </div>
           <div className="w-col w-col-9">
             <p className="text-extra-small align-left text-white-opacity mb-10">
-              Versus, Inc. Are You Ready To Compete With Players From All Over The World? Join Our Community And Become A Part Of The Best Gaming Experience Ever!
+              Versus, Inc. Are You Ready To Compete With Players From All Over The World? Join Our Community And Become A Part Of the best gaming experience ever!
             </p>
           </div>
         </div>

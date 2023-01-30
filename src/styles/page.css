@@ -1,17 +1,9 @@
-html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    height: 100%
-}
-
 article,
 aside,
 details,
 figcaption,
 figure,
 footer,
-header,
 hgroup,
 main,
 menu,
@@ -163,7 +155,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=search] {
-    box-sizing: content-box
+    -webkit-appearance: none;
+    appearance: none
 }
 
 input[type=search]::-webkit-search-cancel-button,
@@ -291,7 +284,8 @@ html.w-mod-touch * {
 }
 
 input.w-button {
-    overflow: visible
+    -webkit-appearance: button;
+    appearance: button;
 }
 
 html[data-w-dynpage] [data-w-cloak] {
@@ -344,6 +338,7 @@ html[data-w-dynpage] [data-w-cloak] {
     text-transform: inherit;
     list-style-type: disc;
     text-shadow: none;
+    -webkit-font-smoothing: auto;
     cursor: inherit;
     white-space: inherit;
     word-break: normal;
@@ -439,8 +434,12 @@ fieldset {
 button,
 html input[type=button],
 input[type=reset] {
+    -webkit-appearance: button;
+    appearance: button;
+    cursor: pointer;
     border: 0;
     cursor: pointer;
+    -webkit-appearance: button
 }
 
 .w-form {
@@ -1466,10 +1465,12 @@ textarea.w-select {
     outline: 0;
     opacity: 0;
     -webkit-user-select: none;
-    user-select: none;
+    user-select: auto;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-tap-highlight-color: transparent;
+    -webkit-transform: translate(0, 0);
+    transform: auto;
 }
 
 .w-lightbox-backdrop,
@@ -1609,6 +1610,8 @@ textarea.w-select {
     padding: 2vh 1vh;
     box-sizing: content-box;
     cursor: pointer;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: auto;
 }
 
 .w-lightbox-active {
@@ -4334,13 +4337,11 @@ figcaption {
 }
 
 .header-shooter {
-
     position: relative;
     overflow: hidden;
-    margin-top: 100px;
     padding-top: 200px;
     padding-bottom: 100px;
-    background-image: ("/images/shooter.png");
+    background-image: url("https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60955a6360bb2869dd29c69c_shooter-bg.jpg");
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat
@@ -12004,28 +12005,10 @@ figcaption {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-        align-items: flex-start
-    }
-
-    .store-game-header-name {
-        margin-top: 10px;
-        margin-left: 0;
-        padding-left: 0;
-        border-left-style: none
-    }
-
-    .post-image {
-        height: 160px
-    }
-
-    .nav-slider-arrow.left {
-        margin-left: -20px
-    }
-
-    .nav-slider-arrow.right {
-        margin-right: -20px
+        -ms-flex: 1;
+        flex: 1;
+        -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0
     }
 }
