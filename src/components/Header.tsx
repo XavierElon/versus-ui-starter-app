@@ -20,7 +20,7 @@ export default function Header() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-zinc-400 hover:bg-zinc-700 hover:text-white ">
                   <span className="sr-only">Open main menu</span>
@@ -32,13 +32,13 @@ export default function Header() {
                 </Disclosure.Button>
               </div>
                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                              <div className="flex-shrink-0 flex items-center">
+                              <div className="flex-shrink-1 flex items-center mt-2">
                               {/* <Image src="/images/versus-logo.png" alt="Logo" width={50} height={50} className="mr-10 ml-10" /> */}
-                              <div className="invisible lg:visible md:visible h-8 w-auto">
-                                  <Link href="#" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-3 py-2 rounded-md text-md font-medium">
+                              <div className="invisible lg:visible md:invisible h-8 w-auto">
+                                  <Link href="#" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-6 ml-12 rounded-md text-md font-medium">
                                       Home
                                       </Link>
-                                        <Link href="#" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-3 py-2 rounded-md text-md font-medium">
+                                        <Link href="#" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-3 rounded-md text-md font-medium">
                                       About
                                   </Link>
                                 

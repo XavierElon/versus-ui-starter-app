@@ -4,10 +4,14 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import {AiFillYoutube,AiFillTwitterCircle,AiFillFacebook} from "react-icons/ai";
 import {BsTwitch} from "react-icons/bs";
+import Seo from "@/components/Seo";
 
 export default function DashboardLayout() {
   return (
     <>
+      <Seo
+        title="Versus - The Next Evolution of Competitive Gaming"
+        description="Versus allows users to play for real earnings. Players will compete against their rivals in solo head-to-head matches, team versus team events, and tournaments. Play with friends, earn, and experience the excitement of competitive gaming." />
       <Header />
       <div className="wrap">
              <div className="header-shooter mb-20 wf-section">
