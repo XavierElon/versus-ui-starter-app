@@ -9,13 +9,15 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...fontFamily.sans],
       },
-    },
+      backgroundImage: {
+        'signup-cover': "url('/images/signup-cover.png')",
+      },
   },
   variants: {
     extend: {},
   },
   plugins: [],
+  }
 };
-
 
 

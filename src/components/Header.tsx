@@ -35,10 +35,10 @@ export default function Header() {
                               <div className="flex-shrink-1 flex items-center mt-2">
                               {/* <Image src="/images/versus-logo.png" alt="Logo" width={50} height={50} className="mr-10 ml-10" /> */}
                               <div className="invisible lg:visible md:invisible h-8 w-auto">
-                                  <Link href="#" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-6 ml-12 rounded-md text-md font-medium">
+                                  <Link href="/" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-6 ml-12 rounded-md text-md font-medium">
                                       Home
                                       </Link>
-                                        <Link href="#" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-3 rounded-md text-md font-medium">
+                                        <Link href="/about-us" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-3 rounded-md text-md font-medium">
                                       About
                                   </Link>
                                 
