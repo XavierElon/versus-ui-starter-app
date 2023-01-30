@@ -1,8 +1,8 @@
-import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { CgMenuGridR } from 'react-icons/cg'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
@@ -33,7 +33,7 @@ export default function Header() {
               </div>
                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                               <div className="flex-shrink-0 flex items-center">
-                              
+                              {/* <Image src="/images/versus-logo.png" alt="Logo" width={50} height={50} className="mr-10 ml-10" /> */}
                               <div className="invisible lg:visible md:visible h-8 w-auto">
                                   <Link href="#" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-3 py-2 rounded-md text-md font-medium">
                                       Home
@@ -77,7 +77,7 @@ export default function Header() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel >
             <div className="space-y-1 divide-y divide-zinc-700 border-t border-b border-zinc-700 zinc-700 pt-2 pb-3">
               {navigation.map((item) => (
                 <Disclosure.Button

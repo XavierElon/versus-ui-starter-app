@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import {AiFillYoutube,AiFillTwitterCircle,AiFillFacebook} from "react-icons/ai";
 import {BsTwitch} from "react-icons/bs";
-import { FaPlaystation } from "react-icons/fa";
 
 export default function DashboardLayout() {
   return (
@@ -14,7 +13,7 @@ export default function DashboardLayout() {
              <div className="header-shooter mb-20 wf-section">
       <div className="container">
         <div className="center-block mb-60">
-          <div className="text-highlight primary mb-40">APRIL 25TH, 2025</div>
+              <div className="text-highlight font-mono primary mb-40">Coming Soon...</div>
          {/* an Image for versus here */}
           <h5 className="text-white mb-40">
              The Next Evolution of Competitive Gaming
@@ -290,7 +289,7 @@ export default function DashboardLayout() {
               className="mb-20"
             />
             <div className="text-white-opacity mb-40">
-                  Get Reacy for the first Season of Versus, be one of the first to
+                  Get Ready for the first Season of Versus, be one of the first to
                   play and build the future of competitive gaming.
             </div>
             <Link href="/season" className="button white w-button">
