@@ -10,8 +10,7 @@ module.exports = {
         sans: ['Inter var', ...fontFamily.sans],
       },
       backgroundImage: {
-        'signup-cover': "url('/images/signup-cover.png')",
-        'spookyguy': "url('/images/spookyguy.png')",
+        'signup-cover': "url('/images/signup-cover.png')"
       },
   },
   variants: {
