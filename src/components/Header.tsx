@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Team', href: '/about-us', current: false },
+  { name: 'About', href: '/about-us', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -37,7 +37,7 @@ export default function Header() {
                               <div className="invisible lg:visible md:invisible h-8 w-auto">
                                   <Link href="/" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-6 ml-12 rounded-md text-md font-medium">
                                       Home
-                                      </Link>
+                    </Link>
                                         <Link href="/about-us" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-3 rounded-md text-md font-medium">
                                       About
                                   </Link>

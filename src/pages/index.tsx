@@ -223,7 +223,7 @@ export default function DashboardLayout() {
                     <strong>MULTIPLAYER</strong>
                   </div>
                   <div className="text-small text-black-opacity">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                    Compete With friends Or Other Players From All Over The World.{" "}
                   </div>
                 </div>
                 <div className="corner-black bottom-right small" />
@@ -247,7 +247,7 @@ export default function DashboardLayout() {
                     <strong>BATTLE ROYALE</strong>
                   </div>
                   <div className="text-small text-black-opacity">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                   Massive MultiPlayer Competitions, With Friends Or Other Players.{" "}
                   </div>
                 </div>
                 <div className="corner-black bottom-right small" />
@@ -268,10 +268,10 @@ export default function DashboardLayout() {
                 </div>
                 <div className="gamemodes-slides-content">
                   <div className="mb-5">
-                    <strong>CAMPAIGN</strong>
+                    <strong>CHALLENGES</strong>
                   </div>
                   <div className="text-small text-black-opacity">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                   Create Your Own Challenges, For Others To Prove They Have What It Takes.{" "}
                   </div>
                 </div>
                 <div className="corner-black bottom-right small" />
@@ -406,7 +406,7 @@ export default function DashboardLayout() {
             </div>
           </div>
           <div className="w-col w-col-5">
-            <h3 className="text-white">BEGIN WITH THE BATTLE PASS</h3>
+            <h3 className="text-white">Get Ready to Create Challenges!</h3>
             <img
               src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa58a341465890b77ce63ba_divider.svg"
               loading="lazy"
@@ -414,9 +414,7 @@ export default function DashboardLayout() {
               className="mb-20"
             />
             <div className="text-white-opacity mb-40">
-                  The first players to purchase the Battle Pass will receive the
-                  exclusive in game item, the “Battle Pass” banner. This banner
-                  will be available to all players who purchase the Battle Pass. Along with the Battle Pass, players will receive a mystery item from the Battle Pass collection.
+                  Those Who Want To Compete On Versus Will Be able To Create Challenges, For Their Friends And Other Players From All Over The World. As Well As Complete other Players Challenges.
             </div>
             <Link
               href="/battle-pass"
@@ -436,7 +434,7 @@ export default function DashboardLayout() {
         <div className="section-inner primary-bordered">
           <div className="corner-black bordered-primary top-left" />
           <div className="corner-black bordered-primary bottom-right large" />
-          <h4 className="text-white">PC SYSTEM REQUIREMENTS</h4>
+          <h4 className="text-white">Get Ready!</h4>
           <img
             src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa58a341465890b77ce63ba_divider.svg"
             loading="lazy"
@@ -445,49 +443,23 @@ export default function DashboardLayout() {
           />
           <div className="row w-row">
             <div className="mobile-mb-20 w-col w-col-6">
-              <h6 className="text-white">MINIMUM</h6>
+              <h6 className="text-white">Versus Will...</h6>
               <ul
                 role="list"
                 className="text-white-opacity text-small mb-0 w-list-unstyled"
               >
-                <li>OS: 64-bit Windows 7, Windows 8.1 and Windows 10</li>
-                <li>Processor: AMD FX-8350 or Intel Core i5 6600K</li>
-                <li>Memory: 8GB RAM</li>
+                <li>Support All Platforms</li>
+                <li>Allow Players To Compete With Anyone, Anytime</li>
+                <li>Allow Users To Create Unique Challenges</li>
                 <li>
-                  Graphics card: NVIDIA GeForce® GTX 660 2GB or AMD Radeon™ RX
-                  560 2GB
-                  <br />
+                  Integrate Games From All Genres, To Make Each Players Experience Unique To Them
                 </li>
-                <li>DirectX: 11.0 Compatible video card or equivalent</li>
                 <li>
-                  Online Connection Requirements: 512 KBPS or faster Internet
-                  connection
+                 Allow Users To Create Their Own Tournaments, And Challenges, With Their Own Rules
                 </li>
-                <li>Hard-drive space: 50GB</li>
               </ul>
             </div>
-            <div className="w-col w-col-6">
-              <h6 className="text-white">RECOMMENDED</h6>
-              <ul
-                role="list"
-                className="text-white-opacity text-small mb-0 w-list-unstyled"
-              >
-                <li>OS: 64-bit Windows 7, Windows 8.1 and Windows 10</li>
-                <li>Processor: AMD Ryzen 3 1300X or Intel Core i7 4790</li>
-                <li>Memory: 12GB RAM</li>
-                <li>
-                  Graphics card: NVIDIA GeForce® GTX 1060 6GB or AMD Radeon™ RX
-                  580 8GB
-                  <br />
-                </li>
-                <li>DirectX: 11.0 Compatible video card or equivalent</li>
-                <li>
-                  Online Connection Requirements: 512 KBPS or faster Internet
-                  connection
-                </li>
-                <li>Hard-drive space: 50GB</li>
-              </ul>
-            </div>
+
           </div>
         </div>
       </div>
@@ -499,7 +471,7 @@ export default function DashboardLayout() {
           <div className="w-col w-col-5">
             <div className="text-highlight primary mb-20">Free to play</div>
             <h3 className="text-white">
-              <strong>A NEW WAY TO BATTLE ROYALE</strong>
+              <strong>A NEW WAY TO COMPETE</strong>
               <br />
             </h3>
             <img
