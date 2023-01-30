@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutUsPage() {
     return (
@@ -386,34 +387,29 @@ export default function AboutUsPage() {
           </div>
         </div>
       </div>
-    </div>
-    <div id="about" className="section white wf-section">
+            </div>
+                     <div className="h-screen w-screen bg-zinc-900">
+            <div className="flex flex-col justify-center items-center h-full">
       <div className="container">
-        <div className="mb-60 w-row">
-          <div className="w-col w-col-6">
-            <img
-              src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a294c57483de500fd753af_logo-mask.png"
-              loading="lazy"
-              alt=""
-              className="about-story-img"
-            />
-          </div>
-          <div className="w-col w-col-6">
-            <h2>OUR STORY</h2>
-            <img
+        <div className="section-inner primary-bordered">
+          <div className="corner-black bordered-primary top-left" />
+          <div className="corner-black bordered-primary bottom-right large" />
+                            <h2 className="text-white">OUR STORY</h2>
+                               <img
               src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa58a341465890b77ce63ba_divider.svg"
               loading="lazy"
               alt=""
-              className="mb-40"
+              className="mb-20"
             />
             <div className="mb-20">
-              <p className="text-black-opacity mb-20">
+              <p className="mb-20 text-white">
               Versus, where we up the ante in competitive gaming. Versus was co-founded by Jessie Sulecki, Robbie Sulecki, Kevin Gabriel and Xavier Hollingsworth. With the goal of reaching a worldwide audience of 3 billion gamers, Versus allows users to play for real earnings. Players will compete against their rivals in solo head-to-head matches, team versus team events, and tournaments. Play with friends, earn, and experience the excitement of competitive gaming.
               </p>
               <p className="text-black-opacity">
              {" "}
               </p>
-            </div>     
+                                </div>
+                 
           </div>
         </div>
       </div>
@@ -421,10 +417,9 @@ export default function AboutUsPage() {
     <div id="contacts" className="section dark wf-section">
       <div className="container">
         <div className="center-block mb-60">
-          <h2 className="text-white">CONTACTS</h2>
+          <h2 className="text-white">CONTACT</h2>
           <p className="text-white-opacity mb-20">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
+           Reach Out To Versus, We Would Love To Hear From You!
           </p>
           <a
             href="/download"
@@ -433,7 +428,7 @@ export default function AboutUsPage() {
             <div className="custom-button-hover white" />
             <div className="corner-dark bottom-right small" />
             <div className="corner-dark top-left small" />
-            <div className="custom-button-text">Get press kit</div>
+            <div className="custom-button-text">Get In Touch</div>
           </a>
         </div>
   

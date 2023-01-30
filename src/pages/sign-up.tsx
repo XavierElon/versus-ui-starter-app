@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import { BsBackspaceFill } from 'react-icons/bs';
-import { AiFillFacebook } from 'react-icons/ai';
 
 const SignUp: NextPage = () => {
   const router = useRouter();

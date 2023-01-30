@@ -11,6 +11,7 @@ module.exports = {
       },
       backgroundImage: {
         'signup-cover': "url('/images/signup-cover.png')",
+        'spookyguy': "url('/images/spookyguy.png')",
       },
   },
   variants: {
