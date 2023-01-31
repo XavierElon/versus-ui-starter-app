@@ -5,8 +5,11 @@ import Link from "next/link";
 import {AiFillYoutube,AiFillTwitterCircle,AiFillFacebook} from "react-icons/ai";
 import {BsTwitch} from "react-icons/bs";
 import Seo from "@/components/Seo";
+import { Fragment, useState } from 'react'
+import { Switch } from '@headlessui/react'
 
 export default function DashboardLayout() {
+   const [enabled, setEnabled] = useState(false)
   return (
     <>
       <Seo
@@ -423,7 +426,7 @@ export default function DashboardLayout() {
               <div className="custom-button-hover white" />
               <div className="corner-black small top-left" />
               <div className="corner-black small bottom-right" />
-              <div className="custom-button-text">Purchase</div>
+              <div className="custom-button-text">Join Now</div>
             </Link>
           </div>
         </div>
@@ -617,23 +620,33 @@ export default function DashboardLayout() {
                       Privacy Policy
                     </Link>
                   </div>
-                  <label className="w-checkbox custom-checkbox-group mb-20">
-                    <div className="w-checkbox-input w-checkbox-input--inputType-custom custom-checkbox w--redirected-checked" />
-                    <input
-                      type="checkbox"
-                      id="checkbox"
-                      name="checkbox"
-                      data-name="Checkbox"
-                      defaultChecked={false}
-                      style={{ opacity: 0, position: "absolute", zIndex: -1 }}
-                    />
+                 
+                    <div className="py-1">
+       <Switch checked={enabled} onChange={setEnabled} as={Fragment}>
+      {({ checked }) => (
+        /* Use the `checked` state to conditionally style the button. */
+        <button
+          className={`${
+            checked ? 'bg-red-700' : 'bg-gray-200'
+          } relative inline-flex h-6 w-11 items-center rounded-full`}
+        >
+          <span className="sr-only">Enable notifications</span>
+          <span
+            className={`${
+              checked ? 'translate-x-6' : 'translate-x-1'
+            } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+          />
+        </button>
+      )}
+    </Switch>
+    </div>
                     <span
                           className="text-extra-small text-white-opacity w-form-label"
                     >
                       I would like to receive news, special offers and other
                       information from Versus and I am 16 years old or older.
                     </span>
-                  </label>
+          
                   <div>
                     <input
                       type="submit"
@@ -700,7 +713,7 @@ export default function DashboardLayout() {
             <Link href="" className="footer-link">
               About us
             </Link>
-            <Link href="/image-licensing" className="footer-link">
+            <Link href="/" className="footer-link">
               licensing
               <br />
             </Link>
