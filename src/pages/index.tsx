@@ -641,7 +641,7 @@ export default function DashboardLayout() {
     </Switch>
     </div>
                     <span
-                          className="text-extra-small text-white-opacity w-form-label"
+                          className="text-extra-small text-white-opacity w-form-label mt-2"
                     >
                       I would like to receive news, special offers and other
                       information from Versus and I am 16 years old or older.
@@ -652,7 +652,7 @@ export default function DashboardLayout() {
                       type="submit"
                       defaultValue="Subscribe"
                       data-wait="Please wait..."
-                      className="button small white7 w-button"
+                      className="button small white7 w-button mt-2"
                     />
                   </div>
                 </form>
