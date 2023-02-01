@@ -1,4 +1,4 @@
-# versus-ui-starter-app
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ### Connecting to ec2 instance
 
@@ -13,10 +13,7 @@ NEXT_PUBLIC_APP_KEY=
 NEXTAUTH_SECRET=
 NEXTAUTH_URL=http://localhost:3000
 
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-FACEBOOK_APP_ID=
-FACEBOOK_APP_SECRET=
+First, run the development server:
 
 NEXT_PUBLIC_UPLOAD_URL=
 NEXT_PUBLIC_IMAGE_UPLOAD_URL=

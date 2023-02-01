@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes';
 import ClickAwayListener from '../ClickAwayListener';
 import Image from 'next/image';
 
+
 const navigation = [
   { name: 'Home', href: '/', current: true },
    { name: 'SignUp', href: '/sign-up', current: false }
