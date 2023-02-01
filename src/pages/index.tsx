@@ -9,7 +9,8 @@ import { Fragment, useState } from 'react'
 import { Switch } from '@headlessui/react'
 
 export default function DashboardLayout() {
-   const [enabled, setEnabled] = useState(false)
+  const [enabled, setEnabled] = useState(false)
+  
   return (
     <>
       <Seo
@@ -26,7 +27,7 @@ export default function DashboardLayout() {
              The Next Evolution of Competitive Gaming
           </h5>
           <div className="button-group">
-            <Link href="/download" className="button primary mb-20 large w-button">
+            <Link href="/" className="button primary mb-20 large w-button">
               Download now
             </Link>
           </div>
