@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const SignUp: NextPage = () => {
   const router = useRouter();
@@ -156,7 +157,8 @@ const SignUp: NextPage = () => {
                     <div className="custom-button-text">Return Home</div>
           </Link>
           </div>
-        </div>
+      </div>
+      <Footer />
       </>
     )
 }

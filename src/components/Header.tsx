@@ -2,11 +2,11 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { CgMenuGridR } from 'react-icons/cg'
-import Image from 'next/image'
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
+  { name: 'Home', href: '/', current: false },
   { name: 'About', href: '/about-us', current: false },
+  { name: 'FAQ', href: '/faq', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -32,18 +32,25 @@ export default function Header() {
                 </Disclosure.Button>
               </div>
                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                              <div className="flex-shrink-1 flex items-center mt-2">
-                              {/* <Image src="/images/versus-logo.png" alt="Logo" width={50} height={50} className="mr-10 ml-10" /> */}
-                              <div className="invisible lg:visible md:invisible h-8 w-auto">
-                                  <Link href="/" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-6 ml-12 rounded-md text-md font-medium">
-                                      Home
-                    </Link>
-                                        <Link href="/about-us" className="invisible lg:visible md:visible hover:text-white no-underline text-zinc-400 px-3 rounded-md text-md font-medium">
-                                      About
-                                  </Link>
+                              <div className="invisible lg:visible md:invisible w-auto">
+                                    <div className="ml-16 flex-0 space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'text-white no-underline' : 'no-underline text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'px-3 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
                                 
                                   </div>
-                                  </div>
+        
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (

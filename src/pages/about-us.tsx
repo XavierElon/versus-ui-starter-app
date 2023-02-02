@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 export default function AboutUsPage() {
     return (
@@ -560,101 +561,7 @@ export default function AboutUsPage() {
         </div>
       </div>
     </div>
-    <div className="section footer wf-section">
-      <div className="container">
-        <div className="text-center">
-          <img
-            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60ce076f36f3d28370d04f56_footer-logos.svg"
-            loading="lazy"
-            width={800}
-            alt=""
-            className="mb-60"
-          />
-        </div>
-        <div className="row mb-40 w-row">
-          <div className="w-col w-col-3">
-            <a href="https://www.esrb.org/" className="w-inline-block">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60ce098852531477a036bb70_esrb-rp-fob.svg"
-                loading="lazy"
-                width={200}
-                alt=""
-                className="mb-10"
-              />
-            </a>
-          </div>
-          <div className="w-col w-col-9">
-            <p className="text-extra-small align-left text-white-opacity mb-10">
-              VERSUS, Inc. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-        <div className="divider mb-40" />
-        <div className="footer-links">
-          <div className="footer-lonks-left">
-            <Link href="/" className="footer-logo w-inline-block">
-            {/* Logo Here */}
-            </Link>
-            <a href="https://craftengine.co/contact" className="footer-link">
-              Support
-            </a>
-            <a href="https://craftengine.co/" className="footer-link">
-              About us
-            </a>
-            <a href="/image-licensing" className="footer-link">
-              licensing
-              <br />
-            </a>
-          </div>
-          <div className="subscribe-socials community align-right">
-            <a
-              href="https://www.youtube.com/"
-              className="footer-social footer-link w-inline-block"
-            >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c43ea304032245df757_icons8-youtube-play-button-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
-            </a>
-            <a
-              href="https://www.twitch.tv/"
-              className="footer-social footer-link w-inline-block"
-            >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c5404fb834cc977640e_icons8-twitch-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              className="footer-social footer-link w-inline-block"
-            >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c64a652432bdcc3866f_icons8-facebook-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
-            </a>
-            <a
-              href="https://twitter.com/"
-              className="footer-social footer-link w-inline-block"
-            >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c70b10647f095430039_icons8-twitter-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <Footer />
 </>
     )
 }
