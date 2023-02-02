@@ -40,10 +40,10 @@ export const Footer = () => {
             <Link href="/" className="footer-logo w-inline-block">
               {/* Logo here */}
             </Link>
-            <Link href="" className="footer-link">
+            <Link href="/faq" className="footer-link">
               Support
             </Link>
-            <Link href="" className="footer-link">
+            <Link href="/about-us" className="footer-link">
               About us
             </Link>
             <Link href="/" className="footer-link">
