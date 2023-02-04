@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "build": "yarn run lint && next build",
+    "start": "yarn run lint && next start",
+    "lint": "yarn eslint .",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write && prettier --config .prettierrc 'src/**/*.tsx' --write"
   },
   "dependencies": {
