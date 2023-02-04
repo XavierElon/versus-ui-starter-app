@@ -1,25 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header";
 import Link from "next/link";
-import Image from "next/image";
+import Footer from "@/components/Footer";
 
 export default function AboutUsPage() {
-    return (
-        <>
+  return (
+      <>
             <Header />
-      <div
-        data-duration-in={100}
-        data-duration-out={100}
-        data-current="Tab 1"
-        data-easing="ease"
-        className="header-company-tabs w-tabs"
-      >
         <div className="header-company-tabs-content w-tab-content">
           <div data-w-tab="Tab 1" className="w-tab-pane w--tab-active">
             <div className="header-company-tabs-content-slider _1">
               <div className="container">
                 <div className="center-block">
-                 {/* Logo Here */}
+
                   <h1 className="text-white">VERSUS</h1>
                   <p className="text-white mb-20">
             A New Era of Gaming, A New Era of Esports, Are You Ready?
@@ -30,128 +23,9 @@ export default function AboutUsPage() {
                 </div>
               </div>
             </div>
-          </div>
-          <div data-w-tab="Tab 2" className="w-tab-pane">
-            <div className="header-company-tabs-content-slider _2">
-              <div className="container">
-                <div className="center-block">
-                  <div className="text-highlight primary mb-10">
-                    Apr 25, 2021
-                  </div>
-                  <h1 className="text-white">THE INVITATIONAL 2021</h1>
-                  <p className="text-white mb-20">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique.{" "}
-                  </p>
-                  <a href="/news" className="button white w-button">
-                    Learn more
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-w-tab="Tab 3" className="w-tab-pane">
-            <div className="header-company-tabs-content-slider _3">
-              <div className="container">
-                <div className="center-block">
-                  <div className="text-highlight primary mb-10">CAREER</div>
-                  <h1 className="text-white">WORK WITH US</h1>
-                  <p className="text-white mb-20">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat.
-                  </p>
-                  <a href="#career" className="button white w-button">
-                    VIEW OPEN POSITIONS
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="header-company-tabs-menu w-tab-menu">
-          <a
-            data-w-tab="Tab 1"
-            className="header-company-tabs-menu-item w-inline-block w-tab-link w--current"
-          >
-            <div className="header-company-tabs-menu-content">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a281bd0721c17e9e753a66_company-1.jpg"
-                loading="lazy"
-                width={60}
-                height={80}
-                srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a281bd0721c17e9e753a66_company-1-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a281bd0721c17e9e753a66_company-1-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a281bd0721c17e9e753a66_company-1.jpg 1920w"
-                sizes="(max-width: 479px) 25vw, 60px"
-                alt=""
-                className="header-company-tabs-menu-image"
-              />
-              <div className="header-company-tabs-menu-text">
-                <div className="text-small">
-                  <strong>Versus</strong> 
-                </div>
-                <div className="text-extra-small text-black-opacity">
-                 A Competitive Gaming Platform For all Players.
-                </div>
-              </div>
-            </div>
-          </a>
-          <a
-            data-w-tab="Tab 2"
-            className="header-company-tabs-menu-item w-inline-block w-tab-link"
-          >
-            <div className="header-company-tabs-menu-content">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28514f3a6ee28a69c48b2_company-2.jpg"
-                loading="lazy"
-                width={60}
-                height={80}
-                srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28514f3a6ee28a69c48b2_company-2-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28514f3a6ee28a69c48b2_company-2-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28514f3a6ee28a69c48b2_company-2-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28514f3a6ee28a69c48b2_company-2.jpg 1920w"
-                sizes="(max-width: 479px) 25vw, 60px"
-                alt=""
-                className="header-company-tabs-menu-image"
-              />
-              <div className="header-company-tabs-menu-text">
-                <div className="text-small">
-                  <strong>Founded 2023</strong>
-                </div>
-                <div className="text-extra-small text-black-opacity">
-                  The Future Of Gaming, has Arrived.
-                </div>
-              </div>
-            </div>
-          </a>
-          <a
-            data-w-tab="Tab 3"
-            className="header-company-tabs-menu-item w-inline-block w-tab-link"
-          >
-            <div className="header-company-tabs-menu-content">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28728c125151e5766cc73_company-3.jpg"
-                loading="lazy"
-                width={60}
-                height={80}
-                srcSet="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28728c125151e5766cc73_company-3-p-1080.jpeg 1080w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28728c125151e5766cc73_company-3-p-1600.jpeg 1600w, https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60a28728c125151e5766cc73_company-3.jpg 1920w"
-                sizes="(max-width: 479px) 25vw, 60px"
-                alt=""
-                className="header-company-tabs-menu-image"
-              />
-              <div className="header-company-tabs-menu-text">
-                <div className="text-small">
-                  <strong>Join Our platform</strong>
-                </div>
-                <div className="text-extra-small text-black-opacity">
-                                    <Link href="/sign-up">
-                                        Sign Up
-                                    </Link>
-                </div>
-              </div>
-            </div>
-          </a>
         </div>
       </div>
-
-    <div className="section light wf-section">
+        <div className="section light wf-section">
       <div className="container">
         <div className="center-block">
           <h2>Versus Platform Supports</h2>
@@ -557,105 +431,10 @@ export default function AboutUsPage() {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div className="section footer wf-section">
-      <div className="container">
-        <div className="text-center">
-          <img
-            src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60ce076f36f3d28370d04f56_footer-logos.svg"
-            loading="lazy"
-            width={800}
-            alt=""
-            className="mb-60"
-          />
-        </div>
-        <div className="row mb-40 w-row">
-          <div className="w-col w-col-3">
-            <a href="https://www.esrb.org/" className="w-inline-block">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60ce098852531477a036bb70_esrb-rp-fob.svg"
-                loading="lazy"
-                width={200}
-                alt=""
-                className="mb-10"
-              />
-            </a>
+              </div>
+            </div>
           </div>
-          <div className="w-col w-col-9">
-            <p className="text-extra-small align-left text-white-opacity mb-10">
-              VERSUS, Inc. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-        <div className="divider mb-40" />
-        <div className="footer-links">
-          <div className="footer-lonks-left">
-            <Link href="/" className="footer-logo w-inline-block">
-            {/* Logo Here */}
-            </Link>
-            <a href="https://craftengine.co/contact" className="footer-link">
-              Support
-            </a>
-            <a href="https://craftengine.co/" className="footer-link">
-              About us
-            </a>
-            <a href="/image-licensing" className="footer-link">
-              licensing
-              <br />
-            </a>
-          </div>
-          <div className="subscribe-socials community align-right">
-            <a
-              href="https://www.youtube.com/"
-              className="footer-social footer-link w-inline-block"
-            >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c43ea304032245df757_icons8-youtube-play-button-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
-            </a>
-            <a
-              href="https://www.twitch.tv/"
-              className="footer-social footer-link w-inline-block"
-            >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c5404fb834cc977640e_icons8-twitch-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              className="footer-social footer-link w-inline-block"
-            >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c64a652432bdcc3866f_icons8-facebook-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
-            </a>
-            <a
-              href="https://twitter.com/"
-              className="footer-social footer-link w-inline-block"
-            >
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60d09c70b10647f095430039_icons8-twitter-100.png"
-                loading="lazy"
-                width={25}
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-</>
-    )
+<Footer />
+    </>
+  );
 }
-
