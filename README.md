@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### Connecting to ec2 instance
 
 - Make sure you have the permissions file. It can be found in the s3 bucket 'versus-permissions'. The file is 'versus-website-next.pem'
-- Once the permissions file is downloaded in your working directory run `ssh -i "versus-website-next.pem" ec2-user@ec2-52-201-224-249.compute-1.amazonaws.com`
+- Once the permissions file is downloaded in your working directory run `ssh -o StrictHostChecking=no -i "versus-website-next.pem" ec2-user@ec2-3-217-109-159.compute-1.amazonaws.com.compute-1.amazonaws.com`
 - Once SSHed in run `sudo su`
 
 example env

@@ -3,9 +3,9 @@
   "version": "0.1.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "yarn run lint && next build",
-    "start": "yarn run lint && next start",
+    "dev": "yarn run lint && next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "yarn eslint .",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write && prettier --config .prettierrc 'src/**/*.tsx' --write"
   },
@@ -30,6 +30,7 @@
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.13",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4"
   }
