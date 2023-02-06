@@ -6,7 +6,7 @@ import { CgMenuGridR } from 'react-icons/cg'
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'About', href: '/about-us', current: false },
-  { name: 'FAQ', href: '/faq', current: false },
+  { name: 'FAQ', href: '/faq', current: false }
 ]
 
 function classNames(...classes: string[]) {
@@ -31,15 +31,17 @@ export default function Header() {
                   )}
                 </Disclosure.Button>
               </div>
-               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                              <div className="invisible lg:visible md:invisible w-auto">
-                                    <div className="ml-16 flex-0 space-x-4">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="invisible lg:visible md:invisible w-auto">
+                  <div className="ml-16 flex-0 space-x-4">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'text-white no-underline' : 'no-underline text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current
+                            ? 'text-white no-underline'
+                            : 'no-underline text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -48,9 +50,8 @@ export default function Header() {
                       </a>
                     ))}
                   </div>
-                                
-                                  </div>
-        
+                </div>
+
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -58,7 +59,9 @@ export default function Header() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current
+                            ? 'bg-gray-900 text-white'
+                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -69,22 +72,21 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-                          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                            
-                                          <Link
-                    href="/sign-up"
-                    className="custom-button small white w-inline-block"
-                  >
-                    <div className="custom-button-hover primary" />
-                    <div className="corner-black bottom-right small" />
-                    <div className="corner-black top-left small" />
-                    <div className="custom-button-text">SIGN UP</div>
-                  </Link>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <Link
+                  href="/sign-up"
+                  className="custom-button small white w-inline-block"
+                >
+                  <div className="custom-button-hover primary" />
+                  <div className="corner-black bottom-right small" />
+                  <div className="corner-black top-left small" />
+                  <div className="custom-button-text">SIGN UP</div>
+                </Link>
               </div>
             </div>
           </div>
 
-          <Disclosure.Panel >
+          <Disclosure.Panel>
             <div className="space-y-1 divide-y divide-zinc-700 border-t border-b border-zinc-700 zinc-700 pt-2 pb-3">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -92,7 +94,9 @@ export default function Header() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'no-underline text-zinc-400 hover:text-white' : 'text-zinc-400 no-underline hover:text-white',
+                    item.current
+                      ? 'no-underline text-zinc-400 hover:text-white'
+                      : 'text-zinc-400 no-underline hover:text-white',
                     'block px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
@@ -100,8 +104,7 @@ export default function Header() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-                      </div>
-                      
+            </div>
           </Disclosure.Panel>
         </>
       )}

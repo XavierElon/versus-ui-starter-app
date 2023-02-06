@@ -1,11 +1,15 @@
-import Link from "next/link"
-import { AiFillYoutube, AiFillFacebook, AiFillTwitterCircle } from "react-icons/ai"
-import { BsTwitch } from "react-icons/bs"
+import Link from 'next/link'
+import {
+  AiFillYoutube,
+  AiFillFacebook,
+  AiFillTwitterCircle
+} from 'react-icons/ai'
+import { BsTwitch } from 'react-icons/bs'
 
 /* eslint-disable @next/next/no-img-element */
 export const Footer = () => {
-    return (
-         <div className="section footer wf-section">
+  return (
+    <div className="section footer wf-section">
       <div className="container">
         <div className="text-center">
           <img
@@ -30,7 +34,9 @@ export const Footer = () => {
           </div>
           <div className="w-col w-col-9">
             <p className="text-extra-small align-left text-white-opacity mb-10">
-              Versus, Inc. Are You Ready To Compete With Players From All Over The World? Join Our Community And Become A Part Of the best gaming experience ever!
+              Versus, Inc. Are You Ready To Compete With Players From All Over
+              The World? Join Our Community And Become A Part Of the best gaming
+              experience ever!
             </p>
           </div>
         </div>
@@ -56,13 +62,13 @@ export const Footer = () => {
               href="https://www.youtube.com/"
               className="footer-social footer-link w-inline-block"
             >
-               <AiFillYoutube />
+              <AiFillYoutube />
             </Link>
             <Link
               href="https://www.twitch.tv/"
               className="footer-social footer-link w-inline-block"
             >
-            <BsTwitch />
+              <BsTwitch />
             </Link>
             <Link
               href="https://www.facebook.com/"
@@ -74,14 +80,13 @@ export const Footer = () => {
               href="https://twitter.com/"
               className="footer-social footer-link w-inline-block"
             >
-              <AiFillTwitterCircle
-              />
+              <AiFillTwitterCircle />
             </Link>
           </div>
         </div>
       </div>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Footer
