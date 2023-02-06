@@ -4,11 +4,15 @@ files:
   - source: /
     destination: /ec2-user/home/versus/versus-ui-starter-app
 hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies.sh
+  AfterInstall:
+    - location: scripts/after_install
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
       timeout: 300
       runas: root

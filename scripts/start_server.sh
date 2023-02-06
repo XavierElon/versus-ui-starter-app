@@ -1,8 +1,6 @@
 #!/bin/bash
 
-cd ..
-pm2 stop "versus-app"
-pm2 delete "versus-app"
+cd /ec2-user/home/versus/versus-ui-starter-app
 yarn run build
 pm2 start npm --name "versus-app" -- start --watch
 systemctl restart nginx
