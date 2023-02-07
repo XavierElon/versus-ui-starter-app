@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /ec2-user/home/versus/versus-ui-starter-app
+file_exists_behavior: OVERWRITE
 hooks:
   AfterInstall:
     - location: scripts/after_install
