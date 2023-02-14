@@ -36,14 +36,14 @@ export const Footer = () => {
             <Link href="/" className="text-white no-underline">
               {/* Logo here */}
             </Link>
-            <Link href="/faq" className="text-white no-underline">
-              Support
+            <Link href="https://docs.google.com/document/d/1dDu1g0eifOj_AAkLqCvHuCfhQR316-zc/export?format=pdf" className="text-white no-underline">
+              Privacy Policy
             </Link>
-            <Link href="/about-us"className="text-white no-underline">
-              About
+            <Link href="https://docs.google.com/document/d/1eW_9C13b27oEj4jP9-gR8RwzvkPJkqYB/export?format=pdf"className="text-white no-underline">
+              Cookie Policy
             </Link>
-            <Link href="/"className="text-white no-underline">
-              licensing
+            <Link href="https://docs.google.com/document/d/1vGgzrIXg2rSwPzZVVUdfJFl0SRAo4Skp/export?format=pdf"className="text-white no-underline">
+              Terms & Conditions
               <br />
               </Link>
 
