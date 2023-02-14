@@ -6,7 +6,7 @@
     "dev": "yarn run lint && next dev",
     "build": "next build",
     "start": "next start",
-    "test": "echo 'insert tests here'",
+    "test": "mocha",
     "lint": "yarn eslint .",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write && prettier --config .prettierrc 'src/**/*.tsx' --write"
   },
