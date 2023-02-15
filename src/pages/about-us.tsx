@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from '@/components/Header'
-import Link from 'next/link'
 import Footer from '@/components/Footer'
 
 export default function AboutUsPage() {

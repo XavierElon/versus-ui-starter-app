@@ -6,7 +6,7 @@ import { CgMenuGridR } from 'react-icons/cg'
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'About', href: '/about-us', current: false },
-  { name: 'FAQ', href: '/faq', current: false }
+  { name: 'More', href: '/faq', current: false }
 ]
 
 function classNames(...classes: string[]) {
@@ -34,26 +34,7 @@ export default function Header() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="invisible lg:visible md:invisible w-auto">
                   <div className="ml-16 flex-0 space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'text-white no-underline'
-                            : 'no-underline text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                    
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -61,7 +42,7 @@ export default function Header() {
                         className={classNames(
                           item.current
                             ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            : 'text-zinc-400 no-underline hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -85,9 +66,8 @@ export default function Header() {
               </div>
             </div>
           </div>
-
-          <Disclosure.Panel>
-            <div className="space-y-1 divide-y divide-zinc-700 border-t border-b border-zinc-700 zinc-700 pt-2 pb-3">
+    <Disclosure.Panel>
+            <div className="space-y-2 divide-y py-2 px-2 divide-zinc-700 border-t border-b border-zinc-700 zinc-700">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -96,8 +76,8 @@ export default function Header() {
                   className={classNames(
                     item.current
                       ? 'no-underline text-zinc-400 hover:text-white'
-                      : 'text-zinc-400 no-underline hover:text-white',
-                    'block px-3 py-2 text-base font-medium'
+                      : 'text-zinc-400 no-underline hover:text-white pt-2 pb-2',
+                    'block text-center justify-center text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
