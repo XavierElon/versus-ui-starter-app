@@ -1,5 +1,3 @@
-'use-client'
-
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React from 'react'
@@ -58,12 +56,9 @@ export default function Seo(props: SeoProps) {
         </>
       )}
 
-      {/* Favicons */}
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
     </Head>
   )
@@ -73,25 +68,24 @@ const favicons: Array<React.ComponentPropsWithoutRef<'link'>> = [
   {
     rel: 'apple-touch-icon',
     sizes: '180x180',
-    href: '/favicon/apple-touch-icon.png'
-  },
-  {
-    rel: 'icon',
-    type: 'image/png',
-    sizes: '32x32',
-    href: '/favicon/favicon-32x32.png'
-  },
-  {
-    rel: 'icon',
-    type: 'image/png',
-    sizes: '16x16',
-    href: '/favicon/favicon-16x16.png'
-  },
-  { rel: 'manifest', href: '/favicon/site.webmanifest' },
-  {
-    rel: 'mask-icon',
-    href: '/favicon/safari-pinned-tab.svg',
-    color: '#00e887'
-  },
-  { rel: 'shortcut icon', href: '/favicon/favicon.ico' }
+    href: '/favicon.ico'
+  }
+  // {
+  //   rel: 'icon',
+  //   type: 'image/png',
+  //   sizes: '32x32',
+  //   href: '/favicon/favicon-32x32.png'
+  // },
+  // {
+  //   rel: 'icon',
+  //   type: 'image/png',
+  //   sizes: '16x16',
+  //   href: '/favicon/favicon-16x16.png'
+  // },
+  // {
+  //   rel: 'mask-icon',
+  //   href: '/favicon/safari-pinned-tab.svg',
+  //   color: '#00e887'
+  // },
+  // { rel: 'shortcut icon', href: '/favicon/favicon.ico' }
 ]

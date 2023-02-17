@@ -9,8 +9,8 @@ import { BsTwitch } from 'react-icons/bs'
 /* eslint-disable @next/next/no-img-element */
 export const Footer = () => {
   return (
-    <div className="section footer wf-section">
-      <div className="container">
+    <div className="flex items-center justify-center pb-40, pt-20">
+      <div className="max-w-1200px px-20">
         <div className="text-center">
           <img
             src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60ce076f36f3d28370d04f56_footer-logos.svg"
@@ -20,69 +20,60 @@ export const Footer = () => {
             className="mb-60"
           />
         </div>
-        <div className="row mb-40 w-row">
-          <div className="w-col w-col-3">
-            <Link href="https://www.esrb.org/" className="w-inline-block">
-              <img
-                src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/60ce098852531477a036bb70_esrb-rp-fob.svg"
-                loading="lazy"
-                width={200}
-                alt=""
-                className="mb-10"
-              />
-            </Link>
-          </div>
-          <div className="w-col w-col-9">
-            <p className="text-extra-small align-left text-white-opacity mb-10">
+        <div className="text-center flex-col-reverse md:flex-row flex justify-center">
+            <p className="text-extra-small align-left text-white-opacity mt-5 pb-10">
               Versus, Inc. Are You Ready To Compete With Players From All Over
-              The World? Join Our Community And Become A Part Of the best gaming
+            The World?
+            <br/>
+       Join Our Community And Become A Part Of the best gaming
               experience ever!
+
             </p>
-          </div>
         </div>
         <div className="divider mb-40" />
-        <div className="footer-links">
-          <div className="footer-lonks-left">
-            <Link href="/" className="footer-logo w-inline-block">
+        <div className="text-white">
+          <div className="flex justify-center space-x-10 mb-40">
+            <Link href="/" className="text-white no-underline">
               {/* Logo here */}
             </Link>
-            <Link href="/faq" className="footer-link">
-              Support
+            <Link href="https://docs.google.com/document/d/1dDu1g0eifOj_AAkLqCvHuCfhQR316-zc/export?format=pdf" className="text-white no-underline">
+              Privacy Policy
             </Link>
-            <Link href="/about-us" className="footer-link">
-              About us
+            <Link href="https://docs.google.com/document/d/1eW_9C13b27oEj4jP9-gR8RwzvkPJkqYB/export?format=pdf"className="text-white no-underline">
+              Cookie Policy
             </Link>
-            <Link href="/" className="footer-link">
-              licensing
+            <Link href="https://docs.google.com/document/d/1vGgzrIXg2rSwPzZVVUdfJFl0SRAo4Skp/export?format=pdf"className="text-white no-underline">
+              Terms & Conditions
               <br />
-            </Link>
-          </div>
-          <div className="subscribe-socials community align-right">
+              </Link>
+
+          <div className="flex text-center justify-center space-x-10 py-1 mb-40">
             <Link
               href="https://www.youtube.com/"
-              className="footer-social footer-link w-inline-block"
+              className="w-25 text-white"
             >
               <AiFillYoutube />
             </Link>
             <Link
               href="https://www.twitch.tv/"
-              className="footer-social footer-link w-inline-block"
+              className="w-25 text-white"
             >
               <BsTwitch />
             </Link>
             <Link
               href="https://www.facebook.com/"
-              className="footer-social footer-link w-inline-block"
+              className="w-25 text-white"
             >
               <AiFillFacebook />
             </Link>
             <Link
               href="https://twitter.com/"
-              className="footer-social footer-link w-inline-block"
+              className="w-25 text-white"
             >
               <AiFillTwitterCircle />
-            </Link>
-          </div>
+              </Link>
+            </div>
+                          </div>
         </div>
       </div>
     </div>

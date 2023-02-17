@@ -2,19 +2,15 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from '@/components/Header'
 import Link from 'next/link'
-import {
-  AiFillYoutube,
-  AiFillTwitterCircle,
-  AiFillFacebook
-} from 'react-icons/ai'
-import { BsTwitch } from 'react-icons/bs'
 import Seo from '@/components/Seo'
 import { Fragment, useState } from 'react'
 import { Switch } from '@headlessui/react'
 import Footer from '@/components/Footer'
+import { Form, useSubscribe } from '@/hooks/useSubscribe'
 
 export default function DashboardLayout() {
   const [enabled, setEnabled] = useState(false)
+const { form, subscribe, inputEl } = useSubscribe();
 
   return (
     <>
@@ -100,7 +96,6 @@ export default function DashboardLayout() {
                           >
                             <iframe
                               src="https://www.youtube.com/embed/0vOpWqBGD8w?rel=0&controls=1&autoplay=0&mute=0&start=0"
-                              frameBorder={0}
                               style={{
                                 position: 'absolute',
                                 left: 0,
@@ -150,7 +145,6 @@ export default function DashboardLayout() {
                           >
                             <iframe
                               src="https://www.youtube.com/embed/L3a_kSTq09U?rel=0&controls=1&autoplay=0&mute=0&start=0"
-                              frameBorder={0}
                               style={{
                                 position: 'absolute',
                                 left: 0,
@@ -200,7 +194,6 @@ export default function DashboardLayout() {
                           >
                             <iframe
                               src="https://www.youtube.com/embed/Vgy0yr-lmio?rel=0&controls=1&autoplay=0&mute=0&start=0"
-                              frameBorder={0}
                               style={{
                                 position: 'absolute',
                                 left: 0,
@@ -619,6 +612,7 @@ export default function DashboardLayout() {
                 <div className="w-col w-col-6">
                   <div className="news-form w-form">
                     <form
+                      onSubmit={subscribe}
                       id="email-form"
                       name="email-form"
                       data-name="Email Form"
@@ -678,11 +672,13 @@ export default function DashboardLayout() {
 
                       <div>
                         <input
+                          ref={inputEl}
                           type="submit"
                           defaultValue="Subscribe"
                           data-wait="Please wait..."
                           className="button small white7 w-button mt-2"
                         />
+                         {form.state === Form.Loading ? <span>loading...</span> : 'Subscribe'}
                       </div>
                     </form>
                     <div className="form-success w-form-done">
