@@ -9,10 +9,9 @@ import Footer from '@/components/Footer'
 import { Form, useSubscribe } from '@/hooks/useSubscribe'
 import { createNewsletterUser } from '@/api/newsletter.api'
 
-export default function DashboardLayout() {
+export const NewsletterCard = () => {
   const [enabled, setEnabled] = useState(false)
   const [email, setEmail] = useState('')
-  const { form, subscribe, inputEl } = useSubscribe()
 
   return (
     <>
