@@ -8,10 +8,11 @@ import { Switch } from '@headlessui/react'
 import Footer from '@/components/Footer'
 import { Form, useSubscribe } from '@/hooks/useSubscribe'
 import { NewsletterCard } from '@/components/NewsletterCard'
+import { createNewsletterUser } from '@/api/newsletter.api'
 
 export default function DashboardLayout() {
   const [enabled, setEnabled] = useState(false)
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('xavier@gmail.com')
   const { form, subscribe, inputEl } = useSubscribe()
 
   return (
@@ -33,7 +34,11 @@ export default function DashboardLayout() {
                 The Next Evolution of Competitive Gaming
               </h5>
               <div className="button-group">
-                <Link href="/" className="button primary mb-20 large w-button">
+                <Link
+                  href="/"
+                  onClick={() => createNewsletterUser(email)}
+                  className="button primary mb-20 large w-button"
+                >
                   Download now
                 </Link>
               </div>
