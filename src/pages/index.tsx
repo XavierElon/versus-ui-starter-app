@@ -9,8 +9,10 @@ import Footer from '@/components/Footer'
 import { Form, useSubscribe } from '@/hooks/useSubscribe'
 import { NewsletterCard } from '@/components/NewsletterCard'
 import { createNewsletterUser } from '@/api/newsletter.api'
+import { ActionCard } from '@/components/Cards/ActionCard'
+import { DownloadCard } from '@/components/Cards/DownloadCard'
 
-export default function DashboardLayout() {
+const DashboardLayout = () => {
   const [enabled, setEnabled] = useState(false)
   const [email, setEmail] = useState('xavier@gmail.com')
   const { form, subscribe, inputEl } = useSubscribe()
@@ -23,28 +25,7 @@ export default function DashboardLayout() {
       />
       <Header />
       <div className="wrap">
-        <div className="header-shooter mb-20 wf-section">
-          <div className="container">
-            <div className="center-block mb-60">
-              <div className="text-highlight font-mono primary mb-40">
-                Coming Soon...
-              </div>
-              {/* an Image for versus here */}
-              <h5 className="text-white mb-40">
-                The Next Evolution of Competitive Gaming
-              </h5>
-              <div className="button-group">
-                <Link
-                  href="/"
-                  onClick={() => createNewsletterUser(email)}
-                  className="button primary mb-20 large w-button"
-                >
-                  Download now
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        <DownloadCard></DownloadCard>
         <div className="section pt-0 wf-section">
           <div className="container">
             <div className="center-block">
@@ -429,29 +410,7 @@ export default function DashboardLayout() {
                   </div>
                 </div>
               </div>
-              <div className="w-col w-col-5">
-                <h3 className="text-white">Get Ready to Create Challenges!</h3>
-                <img
-                  src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa58a341465890b77ce63ba_divider.svg"
-                  loading="lazy"
-                  alt=""
-                  className="mb-20"
-                />
-                <div className="text-white-opacity mb-40">
-                  Those Who Want To Compete On Versus Will Be able To Create
-                  Challenges, For Their Friends And Other Players From All Over
-                  The World. As Well As Complete other Players Challenges.
-                </div>
-                <Link
-                  href="/battle-pass"
-                  className="custom-button primary w-inline-block"
-                >
-                  <div className="custom-button-hover white" />
-                  <div className="corner-black small top-left" />
-                  <div className="corner-black small bottom-right" />
-                  <div className="custom-button-text">Join Now</div>
-                </Link>
-              </div>
+              <ActionCard></ActionCard>
             </div>
           </div>
         </div>
@@ -539,3 +498,5 @@ export default function DashboardLayout() {
     </>
   )
 }
+
+export default DashboardLayout

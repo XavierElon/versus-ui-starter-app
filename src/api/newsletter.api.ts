@@ -10,12 +10,12 @@ export const createNewsletterUser = async (email: string) => {
     console.log('timeing')
   }, 3000)
   try {
-      axios.post(url, {
-          email: email,
-          subscribed: true
-      })
-      console.log('posted')
+    axios.post(url, {
+      email: email,
+      subscribed: true
+    })
+    console.log('posted')
   } catch (error) {
-      console.log(`${error}`)
+    console.log(`${error}`)
   }
 }
