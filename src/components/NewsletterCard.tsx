@@ -4,13 +4,12 @@ import Link from 'next/link'
 import { Fragment, useState } from 'react'
 import { Switch } from '@headlessui/react'
 import { Form, useSubscribe } from '@/hooks/useSubscribe'
-import { createNewsletterUser } from '@/api/newsletter.api'
+import { useNewsletter } from '@/hooks/useNewsletter'
 
 export const NewsletterCard = () => {
   const [enabled, setEnabled] = useState(false)
   const [email, setEmail] = useState('')
-  const { form, subscribe, inputEl } = useSubscribe()
-
+  const { postUser } = useNewsletter(email, true)
   return (
     <>
       <div className="section-inner _3col black">
@@ -101,7 +100,7 @@ export const NewsletterCard = () => {
           <div className="w-col w-col-6">
             <div className="news-form w-form">
               <form
-                onSubmit={() => createNewsletterUser(email)}
+                onSubmit={postUser}
                 id="email-form"
                 name="email-form"
                 data-name="Email Form"
@@ -156,17 +155,17 @@ export const NewsletterCard = () => {
 
                 <div>
                   <input
-                    ref={inputEl}
+                    // ref={inputEl}
                     type="submit"
                     defaultValue="Subscribe"
                     data-wait="Please wait..."
                     className="button small white7 w-button mt-2"
                   />
-                  {form.state === Form.Loading ? (
+                  {/* {form.state === Form.Loading ? (
                     <span>loading...</span>
                   ) : (
                     'Subscribe'
-                  )}
+                  )} */}
                 </div>
               </form>
               <div className="form-success w-form-done">

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { createNewsletterUser } from '@/api/newsletter.api'
 
 export const DownloadCard = () => {
   const email = 'test@gmail.com'
@@ -17,7 +16,7 @@ export const DownloadCard = () => {
           <div className="button-group">
             <Link
               href="/"
-              onClick={() => createNewsletterUser(email)}
+              onClick={() => console.log('test')}
               className="button primary mb-20 large w-button"
             >
               Download now
