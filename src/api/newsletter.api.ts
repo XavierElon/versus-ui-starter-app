@@ -9,7 +9,6 @@ export const postUser = async (props: NewsletterUserData) => {
   const url = process.env.NEXT_PUBLIC_LOCAL_HOST! + 420 + '/newsletter'
   console.log(url)
   console.log(email)
-  console.log(subscribed)
   try {
     axios.post(url, {
       email: email,
