@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from 'react'
 
 export enum Form {
   Initial,
@@ -7,17 +7,17 @@ export enum Form {
   Error
 }
 export type FormState = {
-  state: Form;
-  message?: string;
-  inputEl?: React.RefObject<HTMLInputElement>;
-};
+  state: Form
+  message?: string
+  inputEl?: React.RefObject<HTMLInputElement>
+}
 
 export function useSubscribe() {
-  const [form, setForm] = useState<FormState>({ state: Form.Initial });
-  const inputEl = useRef<HTMLInputElement>(null);
+  const [form, setForm] = useState<FormState>({ state: Form.Initial })
+  const inputEl = useRef<HTMLInputElement>(null)
   async function subscribe(e: React.FormEvent) {
-    e.preventDefault();
-    setForm({ state: Form.Loading });
+    e.preventDefault()
+    setForm({ state: Form.Loading })
     try {
       const res = await fetch('/api/subscribe', {
         body: JSON.stringify({
@@ -27,18 +27,15 @@ export function useSubscribe() {
           'Content-Type': 'application/json'
         },
         method: 'POST'
-      });
-      const { error } = await res.json();
+      })
+      const { error } = await res.json()
       if (error) {
-        throw error;
+        throw error
       }
-      setForm({ state: Form.Success });
+      setForm({ state: Form.Success })
     } catch (error) {
-      setForm({ state: Form.Error, message: "something went wrong" });
+      setForm({ state: Form.Error, message: 'something went wrong' })
     }
   }
-  return { form, inputEl, subscribe };
+  return { form, inputEl, subscribe }
 }
-
-
-

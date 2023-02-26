@@ -21,14 +21,13 @@ export const Footer = () => {
           />
         </div>
         <div className="text-center flex-col-reverse md:flex-row flex justify-center">
-            <p className="text-extra-small align-left text-white-opacity mt-5 pb-10">
-              Versus, Inc. Are You Ready To Compete With Players From All Over
-            The World?
-            <br/>
-       Join Our Community And Become A Part Of the best gaming
-              experience ever!
-
-            </p>
+          <p className="text-extra-small align-left text-white-opacity mt-5 pb-10">
+            Versus, Inc. Are You Ready To Compete With Players From All Over The
+            World?
+            <br />
+            Join Our Community And Become A Part Of the best gaming experience
+            ever!
+          </p>
         </div>
         <div className="divider mb-40" />
         <div className="text-white">
@@ -36,44 +35,44 @@ export const Footer = () => {
             <Link href="/" className="text-white no-underline">
               {/* Logo here */}
             </Link>
-            <Link href="https://docs.google.com/document/d/1dDu1g0eifOj_AAkLqCvHuCfhQR316-zc/export?format=pdf" className="text-white no-underline">
+            <Link
+              href="https://docs.google.com/document/d/1dDu1g0eifOj_AAkLqCvHuCfhQR316-zc/export?format=pdf"
+              className="text-white no-underline"
+            >
               Privacy Policy
             </Link>
-            <Link href="https://docs.google.com/document/d/1eW_9C13b27oEj4jP9-gR8RwzvkPJkqYB/export?format=pdf"className="text-white no-underline">
+            <Link
+              href="https://docs.google.com/document/d/1eW_9C13b27oEj4jP9-gR8RwzvkPJkqYB/export?format=pdf"
+              className="text-white no-underline"
+            >
               Cookie Policy
             </Link>
-            <Link href="https://docs.google.com/document/d/1vGgzrIXg2rSwPzZVVUdfJFl0SRAo4Skp/export?format=pdf"className="text-white no-underline">
+            <Link
+              href="https://docs.google.com/document/d/1vGgzrIXg2rSwPzZVVUdfJFl0SRAo4Skp/export?format=pdf"
+              className="text-white no-underline"
+            >
               Terms & Conditions
               <br />
-              </Link>
+            </Link>
 
-          <div className="flex text-center justify-center space-x-10 py-1 mb-40">
-            <Link
-              href="https://www.youtube.com/"
-              className="w-25 text-white"
-            >
-              <AiFillYoutube />
-            </Link>
-            <Link
-              href="https://www.twitch.tv/"
-              className="w-25 text-white"
-            >
-              <BsTwitch />
-            </Link>
-            <Link
-              href="https://www.facebook.com/"
-              className="w-25 text-white"
-            >
-              <AiFillFacebook />
-            </Link>
-            <Link
-              href="https://twitter.com/"
-              className="w-25 text-white"
-            >
-              <AiFillTwitterCircle />
+            <div className="flex text-center justify-center space-x-10 py-1 mb-40">
+              <Link href="https://www.youtube.com/" className="w-25 text-white">
+                <AiFillYoutube />
+              </Link>
+              <Link href="https://www.twitch.tv/" className="w-25 text-white">
+                <BsTwitch />
+              </Link>
+              <Link
+                href="https://www.facebook.com/"
+                className="w-25 text-white"
+              >
+                <AiFillFacebook />
+              </Link>
+              <Link href="https://twitter.com/" className="w-25 text-white">
+                <AiFillTwitterCircle />
               </Link>
             </div>
-                          </div>
+          </div>
         </div>
       </div>
     </div>

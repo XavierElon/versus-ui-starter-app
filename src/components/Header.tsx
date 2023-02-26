@@ -34,7 +34,6 @@ export default function Header() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="invisible lg:visible md:invisible w-auto">
                   <div className="ml-16 flex-0 space-x-4">
-                    
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -66,7 +65,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-    <Disclosure.Panel>
+          <Disclosure.Panel>
             <div className="space-y-2 divide-y py-2 px-2 divide-zinc-700 border-t border-b border-zinc-700 zinc-700">
               {navigation.map((item) => (
                 <Disclosure.Button
