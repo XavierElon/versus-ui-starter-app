@@ -21,6 +21,8 @@ const DashboardLayout = () => {
   const [email, setEmail] = useState('xavier@gmail.com')
   const { form, subscribe, inputEl } = useSubscribe()
 
+  const handleNewletterSubmit = () => {}
+
   return (
     <>
       <Seo
@@ -30,6 +32,12 @@ const DashboardLayout = () => {
       <Header />
       <div className="wrap">
         <DownloadCard></DownloadCard>
+
+        <div className="section dark wf-section">
+          <div className="container">
+            <NewsletterCard></NewsletterCard>
+          </div>
+        </div>
         <div className="section pt-0 wf-section">
           <div className="container">
             <div className="center-block">
@@ -66,7 +74,6 @@ const DashboardLayout = () => {
         <div className="section dark wf-section">
           <div className="container">
             <CompeteCard></CompeteCard>
-            <NewsletterCard></NewsletterCard>
           </div>
         </div>
         <Footer />
