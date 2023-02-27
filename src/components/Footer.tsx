@@ -22,7 +22,7 @@ export const Footer = () => {
         </div>
         <div className="text-center flex-col-reverse md:flex-row flex justify-center">
           <p className="text-extra-small align-left text-white-opacity mt-5 pb-10">
-            Versus, Inc. Are You Ready To Compete With Players From All Over The
+            Rivals, Inc. Are You Ready To Compete With Players From All Over The
             World?
             <br />
             Join Our Community And Become A Part Of the best gaming experience

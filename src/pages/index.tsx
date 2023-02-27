@@ -1,15 +1,10 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable @next/next/no-img-element */
 import Header from '@/components/Header'
-import Link from 'next/link'
 import Seo from '@/components/Seo'
-import { Fragment, useState } from 'react'
-import { Switch } from '@headlessui/react'
 import Footer from '@/components/Footer'
 import { Form, useSubscribe } from '@/hooks/useSubscribe'
 import { NewsletterCard } from '@/components/NewsletterCard'
-import { createNewsletterUser } from '@/api/newsletter.api'
-import { NewsletterUserData } from '@/models/interfaces'
 import { ActionCard } from '@/components/Cards/ActionCard'
 import { DownloadCard } from '@/components/Cards/DownloadCard'
 import { CompeteCard } from '@/components/Cards/CompeteCard'
@@ -23,8 +18,8 @@ const DashboardLayout = () => {
   return (
     <>
       <Seo
-        title="Versus - The Next Evolution of Competitive Gaming"
-        description="Versus allows users to play for real earnings. Players will compete against their rivals in solo head-to-head matches, team versus team events, and tournaments. Play with friends, earn, and experience the excitement of competitive gaming."
+        title="Rivals - The Next Evolution of Competitive Gaming"
+        description="Rivals allows users to play for real earnings. Players will compete against their rivals in solo head-to-head matches, team Rivals team events, and tournaments. Play with friends, earn, and experience the excitement of competitive gaming."
       />
       <Header />
       <div className="wrap">
@@ -45,9 +40,9 @@ const DashboardLayout = () => {
                 OF GAMING
               </h2>
               <p className="text-white-opacity text-large mb-40">
-                Versus allows users to play for real earnings. Players will
+                Rivals allows users to play for real earnings. Players will
                 compete against their rivals in solo head-to-head matches, team
-                versus team events, and tournaments. Play with friends, earn,
+                Rivals team events, and tournaments. Play with friends, earn,
                 and experience the excitement of competitive gaming.
               </p>
             </div>

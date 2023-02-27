@@ -10,7 +10,7 @@ export const NewsletterCard = () => {
   const [enabled, setEnabled] = useState(false)
   const [newletterForm, setNewsletterForm] = useState<NewsletterUserData>({})
   const [email, setEmail] = useState('')
-  const [subscribed, setSubscribed] = useState(false)
+  const [subscribed, setSubscribed] = useState(true)
 
   const handleNewletterSubmit = (e: Event) => {
     e.preventDefault()
@@ -103,7 +103,7 @@ export const NewsletterCard = () => {
               className="mb-20"
             />
             <p className="text-white text-extra-small">
-              Sign up today to receive the latest Versus news, updates, offers,
+              Sign up today to receive the latest Rivals news, updates, offers,
               and more by email.
             </p>
           </div>
@@ -134,7 +134,7 @@ export const NewsletterCard = () => {
                   <div className="corner-black small bottom-left" />
                 </div>
                 <div className="text-extra-small text-white mb-20 text-white-opacity">
-                  Versus will be responsible for your personal data. For more
+                  Rivals will be responsible for your personal data. For more
                   information please check our{' '}
                   <Link target="_blank" href="/">
                     Privacy Policy
@@ -162,7 +162,7 @@ export const NewsletterCard = () => {
                 </div>
                 <span className="text-extra-small text-white-opacity w-form-label mt-2">
                   I would like to receive news, special offers and other
-                  information from Versus and I am 16 years old or older.
+                  information from Rivals and I am 16 years old or older.
                 </span>
 
                 <div>
