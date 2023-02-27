@@ -12,7 +12,7 @@ export const BorderedCard = () => {
       />
       <div className="row w-row">
         <div className="mobile-mb-20 w-col w-col-6">
-          <h6 className="text-white">Versus Will...</h6>
+          <h6 className="text-white">Rivals Will...</h6>
           <ul
             role="list"
             className="text-white-opacity text-small mb-0 w-list-unstyled"

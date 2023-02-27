@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /ec2-user/home/versus/versus-ui-starter-app
+    destination: /ec2-user/home/xsj-ui-starter-app
 file_exists_behavior: OVERWRITE
 hooks:
   AfterInstall:

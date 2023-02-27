@@ -9,7 +9,7 @@ export const DownloadCard = () => {
           <div className="text-highlight font-mono primary mb-40">
             Coming Soon...
           </div>
-          {/* an Image for versus here */}
+          {/* an Image for Rivals here */}
           <h5 className="text-white mb-40">
             The Next Evolution of Competitive Gaming
           </h5>

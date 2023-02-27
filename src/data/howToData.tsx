@@ -31,7 +31,7 @@ export const howToData = [
     id: 6,
     title: 'Step 5',
     content:
-      'Check and confirm the match rules and settings on the match page on Versus as well as in game on your console.'
+      'Check and confirm the match rules and settings on the match page on Rivals as well as in game on your console.'
   },
   {
     id: 7,
@@ -41,13 +41,13 @@ export const howToData = [
   {
     id: 8,
     title: 'Step 7',
-    content: 'Report the score on the Versus match page.'
+    content: 'Report the score on the Rivals match page.'
   },
   {
     id: 9,
     title: 'Note',
     content:
-      'We recommend screen recording all of your matches on your console when competing on Versus. Be sure to take pictures/screenshots of the match final score in case of a dispute about the match results. With certain games we will use API to automate results.'
+      'We recommend screen recording all of your matches on your console when competing on Rivals. Be sure to take pictures/screenshots of the match final score in case of a dispute about the match results. With certain games we will use API to automate results.'
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const howToData = [
     id: 14,
     title: 'Will there be free tournaments?',
     content:
-      'Yes! We plan on hosting free tournaments in the future. Stay updated by: Following us, or Turn on Twitter notifications for @_versusapp and Instagram Stories notifications for @versusapp.io. Do not never miss out on the password! for free entry'
+      'Yes! We plan on hosting free tournaments in the future. Stay updated by: Following us, or Turn on Twitter notifications for @_Rivalsapp and Instagram Stories notifications for @Rivalsapp.io. Do not never miss out on the password! for free entry'
   },
   {
     id: 15,
@@ -95,13 +95,13 @@ export const howToData = [
     id: 17,
     title: 'Why can I not I play COD on PC?',
     content:
-      'We currently offer Call of Duty on console only on Versus, but we are always updating our offerings and adding new games and platforms. Keep an eye out!'
+      'We currently offer Call of Duty on console only on Rivals, but we are always updating our offerings and adding new games and platforms. Keep an eye out!'
   },
   {
     id: 18,
     title: 'How do disputes work? How is a winner determined?',
     content:
-      'If you and your opponent submit conflicting scores, the match will be disputed. Upload text, or picture and video evidence on the match page to prove the game went the way you say it did. Evidence must be submitted within 10 mins. A Versus admin will evaluate the evidence and make a final decision. Video evidence is the strongest kind. We encourage you to record video of all matches you play on Versus.'
+      'If you and your opponent submit conflicting scores, the match will be disputed. Upload text, or picture and video evidence on the match page to prove the game went the way you say it did. Evidence must be submitted within 10 mins. A Rivals admin will evaluate the evidence and make a final decision. Video evidence is the strongest kind. We encourage you to record video of all matches you play on Rivals.'
   },
   {
     id: 19,

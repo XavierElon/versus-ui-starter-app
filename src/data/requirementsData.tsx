@@ -1,7 +1,7 @@
 export const requirementsData = [
   {
     id: 1,
-    title: 'How can I deposit funds into my Versus account?',
+    title: 'How can I deposit funds into my Rivals account?',
     content: 'The only way to deposit funds to your account is: Paypal.'
   },
   {
@@ -9,13 +9,13 @@ export const requirementsData = [
     title:
       'I am not from the US, do I get charged any fees for currency exchange? Where do you get your exchange rate from?',
     content:
-      'The currency used in Versus is USD. If you deposit with a foreign card, you may see a small discrepancy between the amount you requested to deposit, and the amount your card was charged. The rates are established by your bank / card issuer, not by Versus.'
+      'The currency used in Rivals is USD. If you deposit with a foreign card, you may see a small discrepancy between the amount you requested to deposit, and the amount your card was charged. The rates are established by your bank / card issuer, not by Rivals.'
   },
   {
     id: 3,
     title: 'Why do I need to submit my drivers license or passport?',
     content:
-      'You must be at least 18 years old to use Versus. We are required by law to identify all of our users with valid government ID & confirm they are 18+.There can be tax implications from your winnings, so we must ensure that all of our users are who they claim they are.'
+      'You must be at least 18 years old to use Rivals. We are required by law to identify all of our users with valid government ID & confirm they are 18+.There can be tax implications from your winnings, so we must ensure that all of our users are who they claim they are.'
   },
   {
     id: 4,

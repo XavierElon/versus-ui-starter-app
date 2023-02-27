@@ -11,7 +11,7 @@ export default function AboutUsPage() {
           <div className="header-company-tabs-content-slider _1">
             <div className="container">
               <div className="center-block">
-                <h1 className="text-white">VERSUS</h1>
+                <h1 className="text-white">Rivals</h1>
                 <p className="text-white mb-20">
                   A New Era of Gaming, A New Era of Esports, Are You Ready?
                 </p>
@@ -26,9 +26,9 @@ export default function AboutUsPage() {
       <div className="section light wf-section">
         <div className="container">
           <div className="center-block">
-            <h2>Versus Platform Supports</h2>
+            <h2>Rivals Platform Supports</h2>
             <p className="text-black-opacity mb-60">
-              Versus Platform is a gaming platform that supports all types of
+              Rivals Platform is a gaming platform that supports all types of
               games, And Will Continue To Support More Games In The Future.
             </p>
           </div>
@@ -43,7 +43,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS FPS</h6>
+                    <h6 className="text-white">Rivals FPS</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -61,7 +61,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS SHOOTER</h6>
+                    <h6 className="text-white">Rivals SHOOTER</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -79,7 +79,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS MMO</h6>
+                    <h6 className="text-white">Rivals MMO</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -97,7 +97,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS RPG</h6>
+                    <h6 className="text-white">Rivals RPG</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -117,7 +117,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS MOBA</h6>
+                    <h6 className="text-white">Rivals MOBA</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -135,7 +135,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS SURVIVAL</h6>
+                    <h6 className="text-white">Rivals SURVIVAL</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -153,7 +153,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS SPORT</h6>
+                    <h6 className="text-white">Rivals SPORT</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -171,7 +171,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS RACING</h6>
+                    <h6 className="text-white">Rivals RACING</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -191,7 +191,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS HORROR</h6>
+                    <h6 className="text-white">Rivals HORROR</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -209,7 +209,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS STRATEGY</h6>
+                    <h6 className="text-white">Rivals STRATEGY</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -230,7 +230,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS INDIE</h6>
+                    <h6 className="text-white">Rivals INDIE</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -250,7 +250,7 @@ export default function AboutUsPage() {
                 />
                 <div className="games-item-hover">
                   <div>
-                    <h6 className="text-white">VERSUS MOBILE</h6>
+                    <h6 className="text-white">Rivals MOBILE</h6>
                     <div className="text-white-opacity text-small">
                       Official Site
                     </div>
@@ -276,12 +276,12 @@ export default function AboutUsPage() {
               />
               <div className="mb-20">
                 <p className="mb-20 text-white">
-                  Versus, where we up the ante in competitive gaming. Versus was
+                  Rivals, where we up the ante in competitive gaming. Rivals was
                   co-founded by Jessie Sulecki, Robbie Sulecki, Kevin Gabriel
                   and Xavier Hollingsworth. With the goal of reaching a
-                  worldwide audience of 3 billion gamers, Versus allows users to
+                  worldwide audience of 3 billion gamers, Rivals allows users to
                   play for real earnings. Players will compete against their
-                  rivals in solo head-to-head matches, team versus team events,
+                  rivals in solo head-to-head matches, team Rivals team events,
                   and tournaments. Play with friends, earn, and experience the
                   excitement of competitive gaming.
                 </p>
@@ -296,7 +296,7 @@ export default function AboutUsPage() {
           <div className="center-block mb-60">
             <h2 className="text-white">CONTACT</h2>
             <p className="text-white-opacity mb-20">
-              Reach Out To Versus, We Would Love To Hear From You!
+              Reach Out To Rivals, We Would Love To Hear From You!
             </p>
             <a
               href="/download"
@@ -316,8 +316,8 @@ export default function AboutUsPage() {
                   <strong>General inquiries:</strong>
                 </div>
                 <div className="text-extra-small">
-                  <a href="mailto:support@versus.com" className="link">
-                    support@versus.com
+                  <a href="mailto:support@Rivals.com" className="link">
+                    support@Rivals.com
                   </a>
                 </div>
               </div>
@@ -326,8 +326,8 @@ export default function AboutUsPage() {
                   <strong>Press and media:</strong>
                 </div>
                 <div className="text-extra-small">
-                  <a href="mailto:press@versus.com" className="link">
-                    press@versus.com
+                  <a href="mailto:press@Rivals.com" className="link">
+                    press@Rivals.com
                   </a>
                 </div>
               </div>
@@ -336,8 +336,8 @@ export default function AboutUsPage() {
                   <strong>Career information:</strong>
                 </div>
                 <div className="text-extra-small">
-                  <a href="mailto:jobs@versus.com" className="link">
-                    jobs@versus.com
+                  <a href="mailto:jobs@Rivals.com" className="link">
+                    jobs@Rivals.com
                   </a>
                 </div>
               </div>
@@ -346,8 +346,8 @@ export default function AboutUsPage() {
                   <strong>Business opportunities:</strong>
                 </div>
                 <div className="text-extra-small">
-                  <a href="mailto:business@versus.com" className="link">
-                    business@versus.com
+                  <a href="mailto:business@Rivals.com" className="link">
+                    business@Rivals.com
                   </a>
                 </div>
               </div>

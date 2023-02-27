@@ -14,7 +14,7 @@ export const SeasonCard = () => {
               className="mb-20"
             />
             <div className="text-white-opacity mb-40">
-              Get Ready for the first Season of Versus, be one of the first to
+              Get Ready for the first Season of Rivals, be one of the first to
               play and build the future of competitive gaming.
             </div>
             <Link href="/season" className="button white w-button">

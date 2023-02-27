@@ -3,10 +3,10 @@ import { useRouter } from 'next/router'
 import React from 'react'
 
 const defaultMeta = {
-  title: 'Versus App',
-  siteName: 'Versus App',
+  title: 'Rivals App',
+  siteName: 'Rivals App',
   description: 'Never Miss A Chance When Your Game Is At Its Peak',
-  url: 'https://versusapp.io',
+  url: 'https://Rivalsapp.io',
   type: 'website',
   robots: 'follow, index',
   image: ''
@@ -52,7 +52,7 @@ export default function Seo(props: SeoProps) {
             property="og:publish_date"
             content={meta.date}
           />
-          <meta name="author" property="article:author" content="Versus App" />
+          <meta name="author" property="article:author" content="Rivals App" />
         </>
       )}
 

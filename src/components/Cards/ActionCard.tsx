@@ -100,7 +100,7 @@ export const ActionCard = () => {
           className="mb-20"
         />
         <div className="text-white-opacity mb-40">
-          Those Who Want To Compete On Versus Will Be able To Create Challenges,
+          Those Who Want To Compete On Rivals Will Be able To Create Challenges,
           For Their Friends And Other Players From All Over The World. As Well
           As Complete other Players Challenges.
         </div>

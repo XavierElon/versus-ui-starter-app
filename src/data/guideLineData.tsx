@@ -1,9 +1,9 @@
 export const guideLineData = [
   {
     id: 1,
-    title: 'Below are general rules and guidelines for all Versus matches:',
+    title: 'Below are general rules and guidelines for all Rivals matches:',
     content:
-      'If you receive an invitation on your console that does not match the rules laid out on this match page, DO NOT play the match. If you play the match, lose and submit a dispute, Versus admins will not approve your dispute. Here at Versus, we value fair play, and make what we believe is the most fair decision. Dispute determinations are strictly at the discretion of our admins.'
+      'If you receive an invitation on your console that does not match the rules laid out on this match page, DO NOT play the match. If you play the match, lose and submit a dispute, Rivals admins will not approve your dispute. Here at Rivals, we value fair play, and make what we believe is the most fair decision. Dispute determinations are strictly at the discretion of our admins.'
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export const guideLineData = [
     title:
       'Your account may be under review for one of the following violations:',
     content:
-      'Underage (must be 18+ to play on site), Creating more than one account, Multiple users on same account, False score reporting, Manipulating promotional offers, Derogatory statements (racist, sexist, homophobic, etc), Our support team will be reviewing your account activity and making a decision on whether or not to PERMANENTLY block your account or re-open it. This decision is final and up to the Versus Support team as listed in our Terms of Service. Please be patient—If you respond maliciously to this message, we will immediately block you from contacting support.'
+      'Underage (must be 18+ to play on site), Creating more than one account, Multiple users on same account, False score reporting, Manipulating promotional offers, Derogatory statements (racist, sexist, homophobic, etc), Our support team will be reviewing your account activity and making a decision on whether or not to PERMANENTLY block your account or re-open it. This decision is final and up to the Rivals Support team as listed in our Terms of Service. Please be patient—If you respond maliciously to this message, we will immediately block you from contacting support.'
   },
   {
     id: 6,
