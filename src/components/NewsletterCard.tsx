@@ -8,7 +8,7 @@ import { NewsletterUserData } from '@/models/interfaces'
 
 export const NewsletterCard = () => {
   const [enabled, setEnabled] = useState(false)
-  const [newletterForm, setNewsletterForm] = useState<NewsletterUserData>({})
+  const [newsletterForm, setNewsletterForm] = useState<NewsletterUserData>({})
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(true)
 
@@ -18,7 +18,8 @@ export const NewsletterCard = () => {
       email: email,
       subscribed: subscribed
     })
-    console.log(newletterForm)
+    console.log(newsletterForm)
+    createNewsletterUser(newsletterForm)
   }
   return (
     <>
