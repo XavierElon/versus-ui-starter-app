@@ -1,7 +1,6 @@
 import { NewsletterUserData } from '@/models/interfaces'
 import axios from 'axios'
 
-
 export const createNewsletterUser = async (props: NewsletterUserData) => {
   const { email, subscribed } = props
   const url = process.env.NEXT_PUBLIC_LOCAL_HOST! + 420 + '/newsletter'

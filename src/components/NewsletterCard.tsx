@@ -3,13 +3,23 @@
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
 import { Switch } from '@headlessui/react'
-import { Form, useSubscribe } from '@/hooks/useSubscribe'
-import { useNewsletter } from '@/hooks/useNewsletter'
+import { createNewsletterUser } from '@/api/newsletter.api'
+import { NewsletterUserData } from '@/models/interfaces'
 
 export const NewsletterCard = () => {
   const [enabled, setEnabled] = useState(false)
+  const [newletterForm, setNewsletterForm] = useState<NewsletterUserData>({})
   const [email, setEmail] = useState('')
-  const { postUser } = useNewsletter(email, true)
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleNewletterSubmit = (e: Event) => {
+    e.preventDefault()
+    setNewsletterForm({
+      email: email,
+      subscribed: subscribed
+    })
+    console.log(newletterForm)
+  }
   return (
     <>
       <div className="section-inner _3col black">
@@ -85,7 +95,7 @@ export const NewsletterCard = () => {
             </div>
           </div>
           <div className="w-col w-col-5">
-            <h4 className="text-white">STAY CONNECTED</h4>
+            <h4 className="text-white">Sign Up for Beta</h4>
             <img
               src="https://uploads-ssl.webflow.com/5f34eb6e935a5c1fa933ebe2/5fa58a341465890b77ce63ba_divider.svg"
               loading="lazy"
@@ -100,7 +110,9 @@ export const NewsletterCard = () => {
           <div className="w-col w-col-6">
             <div className="news-form w-form">
               <form
-                onSubmit={postUser}
+                onSubmit={(e) => {
+                  handleNewletterSubmit(e)
+                }}
                 id="email-form"
                 name="email-form"
                 data-name="Email Form"

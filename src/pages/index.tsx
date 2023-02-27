@@ -9,6 +9,7 @@ import Footer from '@/components/Footer'
 import { Form, useSubscribe } from '@/hooks/useSubscribe'
 import { NewsletterCard } from '@/components/NewsletterCard'
 import { createNewsletterUser } from '@/api/newsletter.api'
+import { NewsletterUserData } from '@/models/interfaces'
 import { ActionCard } from '@/components/Cards/ActionCard'
 import { DownloadCard } from '@/components/Cards/DownloadCard'
 import { CompeteCard } from '@/components/Cards/CompeteCard'
@@ -17,11 +18,7 @@ import { SlidesCard } from '@/components/Cards/SlidesCard'
 import { SeasonCard } from '@/components/Cards/SeasonCard'
 
 const DashboardLayout = () => {
-  const [enabled, setEnabled] = useState(false)
-  const [email, setEmail] = useState('xavier@gmail.com')
   const { form, subscribe, inputEl } = useSubscribe()
-
-  const handleNewletterSubmit = () => {}
 
   return (
     <>
