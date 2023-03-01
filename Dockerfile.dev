@@ -1,0 +1,32 @@
+# node version?
+FROM node:18-bullseye-slim
+
+WORKDIR /usr/src
+
+RUN --mount=type=cache,target=/var/cache/apt apt-get -y update && apt-get -y install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+COPY package.json package.json
+
+RUN --mount=type=cache,target=/var/cache/yarn yarn config set cache-folder /var/cache/yarn && yarn install 
+
+COPY ui-mstax-files ui-mstax-files
+WORKDIR /usr/src/ui-mstax-files/
+RUN --mount=type=cache,target=/var/cache/yarn yarn config set cache-folder /var/cache/yarn && yarn install 
+RUN yarn link
+
+WORKDIR /usr/src/
+RUN yarn link ui-mstax-files
+
+COPY public public
+COPY src src
+COPY index.html index.html
+COPY tsconfig.json tsconfig.json
+COPY vite.config.ts vite.config.ts
+COPY tsconfig.node.json tsconfig.node.json
+COPY cypress.config.js cypress.config.js
+COPY cypress cypress
+
+# Make port 3000 available
+EXPOSE 3000
+
+# CMD runs when the container starts...the start recipe gets defined in your package.json
+CMD ["yarn", "run", "dev"]
