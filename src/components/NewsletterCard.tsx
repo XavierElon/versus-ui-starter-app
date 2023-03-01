@@ -19,14 +19,10 @@ export const NewsletterCard = () => {
       email: email,
       subscribed: subscribed
     })
-    console.log(newsletterForm)
-    try {
-      console.log('here')
-      await createNewsletterUser(newsletterForm)
-      toast.success('Successfully subscribed')
-      console.log('succeeded')
-    } catch (error) {
-      console.log('fail')
+    const succeeded = await createNewsletterUser(newsletterForm)
+    if (succeeded) {
+      toast.success('Succesfully subscribed')
+    } else {
       toast.error('Did not subscribe successfully')
     }
   }
