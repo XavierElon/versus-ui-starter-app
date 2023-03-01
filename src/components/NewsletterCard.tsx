@@ -5,6 +5,7 @@ import { Fragment, useState } from 'react'
 import { Switch } from '@headlessui/react'
 import { createNewsletterUser } from '@/api/newsletter.api'
 import { NewsletterUserData } from '@/models/interfaces'
+import toast, { Toaster } from 'react-hot-toast'
 
 export const NewsletterCard = () => {
   const [enabled, setEnabled] = useState(false)
@@ -12,14 +13,22 @@ export const NewsletterCard = () => {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(true)
 
-  const handleNewletterSubmit = (e: Event) => {
+  const handleNewletterSubmit = async (e: Event) => {
     e.preventDefault()
     setNewsletterForm({
       email: email,
       subscribed: subscribed
     })
     console.log(newsletterForm)
-    createNewsletterUser(newsletterForm)
+    try {
+      console.log('here')
+      await createNewsletterUser(newsletterForm)
+      toast.success('Successfully subscribed')
+      console.log('succeeded')
+    } catch (error) {
+      console.log('fail')
+      toast.error('Did not subscribe successfully')
+    }
   }
   return (
     <>
@@ -27,6 +36,7 @@ export const NewsletterCard = () => {
         <div className="row w-row">
           <div className="w-col w-col-1">
             <div className="subscribe-socials">
+              <Toaster position="top-center" reverseOrder={false} />
               <Link
                 href="https://www.youtube.com/"
                 className="footer-social w-inline-block"

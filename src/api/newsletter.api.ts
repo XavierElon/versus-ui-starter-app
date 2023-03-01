@@ -7,13 +7,11 @@ export const createNewsletterUser = async (
   const { email, subscribed } = newletterForm
   const url = process.env.NEXT_PUBLIC_LOCAL_HOST! + 420 + '/newsletter'
   console.log(url)
-  console.log(email)
   try {
-   await axios
-      .post(url, {
-        email: email,
-        subscribed: subscribed
-      })
+    await axios.post(url, {
+      email: email,
+      subscribed: subscribed
+    })
   } catch (error) {
     console.error(`${error}`)
   }
