@@ -1,0 +1,324 @@
+version: "3.9"
+networks:
+  mstax-v2:
+    driver: bridge
+    name: mstax-v2
+    # external: true
+  # camunda-platform:
+    # driver: host
+    # name: camunda-platform
+volumes:
+  clamav_data: null
+  elasticsearch_data: null
+  sonarqube_data: null
+  sonarqube_logs: null
+  sonarqube_extensions: null
+  zeebe: null
+  s3local_data: null
+  postgresql-volume: null
+  connectors: null
+
+services:
+  api-classification:
+    build:
+      context: api-classification/
+      dockerfile: Dockerfile.dev
+    image: starter-app-v2-mono_api-classification:latest
+    container_name: api-classification
+    environment:
+      PORT: 8000
+      HOST: 0.0.0.0
+      PYTHONBUFFERED: 1
+      MAX_PAGE_LIMIT: 1000000
+    ports:
+      - 5002:8000
+    networks:
+      - mstax-v2
+
+  api-data-manager:
+    build:
+      context: api-data-manager/
+      dockerfile: Dockerfile.dev
+    image: starter-app-v2-mono_api-data-manager:latest
+    container_name: api-data-manager
+    environment:
+      PORT: 8000
+      HOST: 0.0.0.0
+      PYTHONBUFFERED: 1
+      MAX_PAGE_LIMIT: 1000000
+    ports:
+      - 5014:8000
+    networks:
+      - mstax-v2
+  api-camunda:
+    build:
+      context: api-camunda/
+      dockerfile: Dockerfile.dev
+    image: starter-app-v2-mono_api-camunda:latest
+    container_name: api-camunda
+    environment:
+      PORT: 5015
+      HOST: 0.0.0.0
+      PYTHONUNBUFFERED: 1
+      MAX_PAGE_LIMIT: 1000000
+    ports:
+      - 5015:5015
+    networks:
+      - mstax-v2
+  api-worker:
+      build:
+        context: api-worker/
+        dockerfile: Dockerfile.dev
+      image: starter-app-v2-mono_api-worker:latest
+      container_name: api-worker
+      environment:
+        PORT: 5015
+        HOST: 0.0.0.0
+        PYTHONUNBUFFERED: 1
+        MAX_PAGE_LIMIT: 1000000
+      ports:
+        - 5016:5016
+      networks:
+        - mstax-v2
+
+  api-files:
+    build:
+      context: api-files/
+      dockerfile: Dockerfile.dev
+    image: starter-app-v2-mono_api-files:latest
+    container_name: api-files
+    environment:
+      PORT: 8000
+      HOST: 0.0.0.0
+      PYTHONBUFFERED: 1
+      MAX_PAGE_LIMIT: 1000000
+      ENABLE_CLAMAV_SCAN: True
+      CLAMAV_ENDPOINT: "clamav"
+      CLAMAV_PORT: 3310
+    ports:
+      - 5001:8000
+    networks:
+      - mstax-v2
+
+  ui-starter-app:
+    image: starter-app-v2-ui-starter-app:latest
+    container_name: ui-starter-app
+    stdin_open: true
+    environment:
+      HTTP_SCHEME: http
+      TOOL_NODE_FLAGS: "--max_old_space_size=7096"
+    ports:
+      - 5173:5173
+    networks:
+      - mstax-v2
+    cpu_count: 4
+    cpu_percent: 100
+    restart: always
+
+  api-notify:
+    image: starter-app-v2-mono_api-notify
+    build:
+      context: api-notify/
+      dockerfile: Dockerfile.dev
+      args:
+        HTTP_SCHEME: http
+        SMTP_ENDPOINT: mailhog
+        SMTP_PORT: 1025
+        SMTP_USER: username
+        SMTP_PASSWORD: password
+        SMTP_TLS: False
+        SMTP_SSL: False
+    container_name: api-notify
+    environment:
+      PORT: 8000
+      HOST: 0.0.0.0
+      PYTHONUNBUFFERED: 1
+      MAX_PAGE_LIMIT: 1000000
+    ports:
+      - 5012:8000
+    networks:
+      - mstax-v2
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mailhog
+    environment:
+      CUSTOM: mstax
+    networks:
+      - mstax-v2
+    ports:
+      - 1025:8000 # smtp server
+      - 8025:8000 # web ui
+
+  elasticsearch:
+    image: starter-app-v2/elasticsearch
+    build:
+      context: "."
+      dockerfile: Dockerfile.elastic
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+    environment:
+      - bootstrap.memory_lock=true
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      # allow running with low disk space
+      - cluster.routing.allocation.disk.threshold_enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"    
+    networks:
+      - mstax-v2
+    volumes:
+      - type: volume
+        source: elasticsearch_data
+        target: /usr/share/elasticsearch/data
+    restart: always
+  zeebe: # https://docs.camunda.io/docs/self-managed/platform-deployment/docker/#zeebe
+    image: camunda/zeebe:8.2.0-alpha3
+    container_name: zeebe
+    ports:
+      - 26500:26500
+      - "5701:5701"
+      - 9600:9600
+    environment: # https://docs.camunda.io/docs/self-managed/zeebe-deployment/configuration/environment-variables/
+      - ZEEBE_BROKER_EXPORTERS_ELASTICSEARCH_CLASSNAME=io.camunda.zeebe.exporter.ElasticsearchExporter
+      - ZEEBE_BROKER_EXPORTERS_ELASTICSEARCH_ARGS_URL=http://elasticsearch:9200
+      - ZEEBE_BROKER_EXPORTERS_ELASTICSEARCH_ARGS_BULK_SIZE=1
+      # allow running with low disk space
+      - ZEEBE_BROKER_DATA_DISKUSAGECOMMANDWATERMARK=0.998
+      - ZEEBE_BROKER_DATA_DISKUSAGEREPLICATIONWATERMARK=0.999
+      - "JAVA_TOOL_OPTIONS=-Xms512m -Xmx512m"
+    restart: always
+    volumes:
+      - zeebe:/usr/local/zeebe/data
+    networks:
+      - mstax-v2
+    depends_on:
+      - elasticsearch
+
+  operate: # https://docs.camunda.io/docs/self-managed/platform-deployment/docker/#operate
+    image: camunda/operate:8.2.0-alpha3
+    container_name: operate
+    ports:
+      - "8081:8080"
+    environment: # https://docs.camunda.io/docs/self-managed/operate-deployment/configuration/
+      - CAMUNDA_OPERATE_ZEEBE_GATEWAYADDRESS=zeebe:26500
+      - CAMUNDA_OPERATE_ELASTICSEARCH_URL=http://elasticsearch:9200
+      - CAMUNDA_OPERATE_ZEEBEELASTICSEARCH_URL=http://elasticsearch:9200
+    networks:
+      - mstax-v2
+    depends_on:
+      - zeebe
+      - elasticsearch
+
+  tasklist: # https://docs.camunda.io/docs/self-managed/platform-deployment/docker/#tasklist
+    image: camunda/tasklist:8.2.0-alpha3
+    container_name: tasklist
+    ports:
+      - "8082:8080"
+    environment: # https://docs.camunda.io/docs/self-managed/tasklist-deployment/configuration/
+      - CAMUNDA_TASKLIST_ZEEBE_GATEWAYADDRESS=zeebe:26500
+      - CAMUNDA_TASKLIST_ELASTICSEARCH_URL=http://elasticsearch:9200
+      - CAMUNDA_TASKLIST_ZEEBEELASTICSEARCH_URL=http://elasticsearch:9200
+    networks:
+      - mstax-v2
+    depends_on:
+      - zeebe
+      - elasticsearch
+
+  optimize: # https://docs.camunda.io/docs/self-managed/platform-deployment/docker/#optimize
+      image: camunda/optimize:${CAMUNDA_OPTIMIZE_VERSION:-3.8.5}
+      container_name: optimize
+      ports:
+        - "8083:8090"
+      environment: # https://docs.camunda.io/docs/self-managed/optimize-deployment/setup/installation/#available-environment-variables
+        - OPTIMIZE_ELASTICSEARCH_HOST=elasticsearch
+        - OPTIMIZE_ELASTICSEARCH_HTTP_PORT=9200
+        - SPRING_PROFILES_ACTIVE=ccsm
+        - CAMUNDA_OPTIMIZE_ZEEBE_ENABLED=true
+        - CAMUNDA_OPTIMIZE_ENTERPRISE=false
+        - CAMUNDA_OPTIMIZE_IDENTITY_ISSUER_URL=http://localhost:18080/auth/realms/camunda-platform
+        - CAMUNDA_OPTIMIZE_IDENTITY_ISSUER_BACKEND_URL=http://keycloak:8080/auth/realms/camunda-platform
+        - CAMUNDA_OPTIMIZE_IDENTITY_CLIENTID=optimize
+        - CAMUNDA_OPTIMIZE_IDENTITY_CLIENTSECRET=XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
+        - CAMUNDA_OPTIMIZE_IDENTITY_AUDIENCE=optimize-api
+        - CAMUNDA_OPTIMIZE_SECURITY_AUTH_COOKIE_SAME_SITE_ENABLED=false
+        - CAMUNDA_OPTIMIZE_UI_LOGOUT_HIDDEN=true
+      volumes:
+        - "./.optimize/environment-config.yaml:/optimize/config/environment-config.yaml"
+      restart: on-failure
+      networks:
+        - mstax-v2
+      depends_on:
+        - elasticsearch
+    
+  clamav:
+    image: starter-app-v2/clamav
+    build:
+      context: "."
+      dockerfile: Dockerfile.clamav
+    container_name: clamav
+    ports:
+      - 3310:3310
+    environment:
+      discovery.type: single-node
+    networks:
+      - mstax-v2
+    volumes:
+      - type: volume
+        source: clamav_data
+        target: /usr/share/clamav/data
+    restart: unless-stopped
+    # healthcheck:
+    #   test: ["CMD", "./check.sh"]
+    #   interval: 600s
+    #   retries: 3
+    #   start_period: 120s   
+
+  s3local:
+    image: scireum/s3-ninja:7.2
+    container_name: s3local
+    volumes:
+      - type: volume
+        source: s3local_data
+        target: /home/sirius/data
+    ports:
+      - 9444:9000
+    networks:
+      - mstax-v2
+    restart: always
+
+  postgresql:
+    image: postgres:11.11
+    container_name: postgresql
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - mstax-v2
+    volumes:
+      - type: volume
+        source: postgresql-volume
+        target: /var/lib/postgresql/data
+    restart: always
+
+  connectors: # https://docs.camunda.io/docs/components/integration-framework/connectors/out-of-the-box-connectors/available-connectors-overview/
+    image: camunda/connectors-bundle:${CAMUNDA_CONNECTORS_VERSION:-0.14.2}
+    container_name: connectors
+    ports:
+      - "8085:8080"
+    environment:
+      - ZEEBE_CLIENT_BROKER_GATEWAY-ADDRESS=zeebe:26500
+      - ZEEBE_CLIENT_SECURITY_PLAINTEXT=true
+      - CAMUNDA_CONNECTOR_POLLING_ENABLED=false
+      - CAMUNDA_CONNECTOR_WEBHOOK_ENABLED=false
+      - SPRING_MAIN_WEB-APPLICATION-TYPE=none
+    env_file: connector-secrets.txt
+    networks:
+      - mstax-v2
+    depends_on:
+      - zeebe
+      - operate
