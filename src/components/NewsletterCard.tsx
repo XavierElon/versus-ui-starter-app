@@ -32,7 +32,7 @@ export const NewsletterCard = () => {
         <div className="row w-row">
           <div className="w-col w-col-1">
             <div className="subscribe-socials">
-              <Toaster position="top-center" reverseOrder={false} />
+              <Toaster position="bottom-center" reverseOrder={false} />
               <Link
                 href="https://www.youtube.com/"
                 className="footer-social w-inline-block"

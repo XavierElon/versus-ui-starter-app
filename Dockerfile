@@ -8,7 +8,10 @@ RUN --mount=type=cache,target=/var/cache/apt apt-get -y update && apt-get -y ins
 COPY package*.json ./
 RUN --mount=type=cache,target=/var/cache/yarn yarn config set cache-folder /var/cache/yarn && yarn install
 
+
 COPY . .
 EXPOSE 3000
 
-CMD ["yarn", "run", "dev"]
+RUN npm install pm2 -g
+
+CMD ["pm2", "start", "npm", "--name", "ui-starter-app", "--", "start", "--watch"]
