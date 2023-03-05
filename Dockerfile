@@ -14,4 +14,4 @@ EXPOSE 3000
 
 RUN npm install pm2 -g
 
-CMD ["pm2", "start", "npm", "--name", "ui-starter-app", "--", "start", "--watch"]
+CMD ["pm2-runtime", "start", "npm", "--name", "ui-starter-app", "--", "start", "--watch"]
