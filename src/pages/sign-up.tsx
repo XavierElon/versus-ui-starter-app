@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { UserData, ValidationPattern, ErrorMessage } from '@/models/interfaces'
-import { createUser } from '@/api/signup.api'
+import { createUser } from '@/pages/api/signup.api'
 import CustomInput from '@/components/Inputs/CustomInput';
 
 

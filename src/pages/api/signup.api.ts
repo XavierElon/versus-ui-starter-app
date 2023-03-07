@@ -1,12 +1,14 @@
 import { UserData } from '@/models/interfaces'
 import axios, { AxiosError }  from 'axios'
-import { transpileModule } from 'typescript'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export const createUser  = async (
   userData: UserData
 ): Promise<boolean | String> => {
   const { email, firstName, lastName, userName, password, mobileNumber } = userData
-  const url = 'http://18.237.115.207:1017/signup';
+  const url = process.env.CREATE_USER_URL || '';
   console.log('url -> ',url)
   try {
     await axios.post(url, {
