@@ -1,14 +1,27 @@
 import { NextPage } from 'next'
-import React, { useEffect } from 'react'
+import React, { FormEvent, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import toast from 'react-hot-toast'
+import { toast, Toaster } from 'react-hot-toast';
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { UserData, ValidationPattern, ErrorMessage } from '@/models/interfaces'
+import { createUser } from '@/pages/api/signup.api'
+import CustomInput from '@/components/Inputs/CustomInput';
+
 
 const SignUp: NextPage = () => {
+
+
+  const pattern = new ValidationPattern();
+  const errorMessge = new ErrorMessage();
   const router = useRouter()
   const error = router.query.error as string
+
+  const [userData, setUserData] = useState<UserData>({
+    firstName: '', lastName: '', userName: '',
+    email: '', password: '', mobileNumber: ''
+  })
 
   useEffect(() => {
     if (error) {
@@ -16,16 +29,62 @@ const SignUp: NextPage = () => {
       toast.error(errors[error] || error)
     }
   }, [error])
-  const handleSubmit = (event: { preventDefault: () => void }) => {
-    event.preventDefault()
-    // submit formData to server or perform other actions
+
+  function handleInputChange(key: string, value: string,) {
+    setUserData((prevState) => ({ ...prevState, [key]: value }));
   }
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log('hanlde submit called');
+    console.log('event -> ', event);
+    console.log('event -> ', event.target);
+    const firstName = (event.target as HTMLFormElement)["firstName"].value;
+    const lastName = (event.target as HTMLFormElement)["lastName"].value;
+    const userName = (event.target as HTMLFormElement)["userName"].value;
+    const password = (event.target as HTMLFormElement)["password"].value;
+    const email = (event.target as HTMLFormElement)["email"].value;
+    const mobileNumber = (event.target as HTMLFormElement)["mobileNumber"].value;
+
+    if (!firstName || !lastName || !userName || !password || !email || !mobileNumber) {
+      console.error('Missing required form fields');
+      return;
+    }
+    setUserData({
+      ...userData,
+      firstName: firstName,
+      email: email,
+      lastName: lastName,
+      userName: userName,
+      password: password,
+      mobileNumber: mobileNumber,
+    });
+    const succeeded = await createUser(userData);
+    console.log('succeeded - > ', succeeded);
+    if (succeeded === true) {
+      toast.success('Successfully created');
+    } else if (succeeded === false) {
+      toast.error('Did not create successfully');
+    } else {
+      toast.error(`Error creating user: ${succeeded}`);
+    }
+  };
+
+
+
+
   const handleDelete = (event: { preventDefault: () => void }) => {
     event.preventDefault()
     // submit formData to server or perform other actions
   }
+
+
   return (
     <>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
       <Header />
       <div className="bg-[url('/images/signup-cover.png')] bg-cover bg-center bg-no-repeat h-100%">
         <div className="flex-grow flex flex-col justify-center items-center gap-3">
@@ -39,54 +98,58 @@ const SignUp: NextPage = () => {
             <div className="flex flex-col gap-3">
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col gap-3">
-                  <label htmlFor="firstname"></label>
-                  <input
-                    placeholder="First Name"
-                    type="text"
-                    name="firstname"
-                    id="firstname"
-                    className=" px-2 py-1 rounded-md border-gray-200 bg-gray-200"
+                  <CustomInput
+                    name='firstName'
+                    label='First name'
+                    pattern={pattern.name}
+                    errorMessage={errorMessge.firstName}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div className="flex flex-col gap-3">
-                  <label htmlFor="lastname"></label>
-                  <input
-                    placeholder="Last Name"
-                    type="text"
-                    name="lastname"
-                    id="lastname"
-                    className=" px-2 py-1 rounded-md border-gray-200 bg-gray-200"
+                  <CustomInput
+                    name='lastName'
+                    label='Last name'
+                    pattern={pattern.name}
+                    errorMessage={errorMessge.lastName}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div className="flex flex-col gap-3">
-                  <label htmlFor="email"></label>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    name="email"
-                    id="email"
-                    className=" rounded-md px-2 py-1 border-gray-200 bg-gray-200"
+                  <CustomInput
+                    name='userName'
+                    label='User name'
+                    pattern={pattern.userName}
+                    errorMessage={errorMessge.userName}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div className="flex flex-col gap-3">
-                  <label htmlFor="mobilenumber"></label>
-                  <input
-                    type="number"
-                    placeholder="Mobile Number"
-                    name="mobilenumber"
-                    id="mobilenumber"
-                    className=" px-2 py-1 rounded-md border-gray-200 bg-gray-200"
-                  />
+                <CustomInput 
+                name='email'
+                label='Email'
+                 pattern={pattern.email}
+                 errorMessage={errorMessge.email}
+                  onChange={handleInputChange}
+                />
                 </div>
                 <div className="flex flex-col gap-3">
-                  <label htmlFor="confirmPassword"></label>
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    name="confirmPassword"
-                    id="confirmPassword"
-                    className=" px-2 py-1 rounded-md border-gray-200 bg-gray-200"
-                  />
+                <CustomInput 
+                name='mobileNumber'
+                label='Mobile number'
+                 pattern={pattern.mobileNumber}
+                 errorMessage={errorMessge.mobileNumber}
+                  onChange={handleInputChange}
+                />
+                </div>
+                <div className="flex flex-col gap-3">
+                <CustomInput 
+                name='password'
+                label='Password'
+                 pattern={pattern.password}
+                 errorMessage={errorMessge.password}
+                  onChange={handleInputChange}
+                />
                 </div>
                 <div className="flex flex-col gap-3 my-3">
                   <p>Picture Of ID</p>
@@ -132,15 +195,9 @@ const SignUp: NextPage = () => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <Link
-                    href="/sign-up"
-                    className="custom-button small white w-inline-block text-center"
-                  >
-                    <div className="custom-button-hover primary" />
-                    <div className="corner-black bottom-right small" />
-                    <div className="corner-black top-left small" />
-                    <div className="custom-button-text">SIGN UP</div>
-                  </Link>
+                  <button className="w-full px-3 py-2 text-white bg-blue-500 rounded-md font-medium" type="submit">
+                    Submit
+                  </button>
                   <Link
                     href="/sign-up"
                     className="custom-button small white w-inline-block text-center"
