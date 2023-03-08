@@ -44,7 +44,7 @@ export class ValidationPattern {
       this.userName =
         'User name must contain only letters and numbers, and must be between 3 - 20 characters and have no spaces'
       this.firstName = 'First name must contain only letters, and must be between 2 - 30 characters and have no spaces'
-      this.lastName = 'Last name must contain only letters, and must be between 2 - 30 characters and spaces'
+      this.lastName = 'Last name must contain only letters, and must be between 2 - 30 characters and have no spaces'
     }
   }
   

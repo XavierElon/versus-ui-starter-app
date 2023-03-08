@@ -2,7 +2,7 @@ import { UserData } from '@/models/interfaces'
 import axios, { AxiosError }  from 'axios'
 import dotenv from 'dotenv'
 
-dotenv.config()
+
 
 export const createUser  = async (
   userData: UserData
