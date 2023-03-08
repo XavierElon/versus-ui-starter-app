@@ -14,7 +14,8 @@ const {
   STRIPE_SECRET_KEY,
   OPENAI_API_KEY,
   APP_URL,
-  WS_URL
+  WS_URL,
+  CREATE_USER_URL
 } = process.env;
 
 module.exports = {
@@ -34,6 +35,7 @@ module.exports = {
     STRIPE_SECRET_KEY,
     OPENAI_API_KEY,
     APP_URL,
-    WS_URL
+    WS_URL,
+    CREATE_USER_URL
   }
 };
