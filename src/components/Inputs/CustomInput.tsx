@@ -1,36 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 interface Props {
-  name: string;
-  label: string;
-  pattern: RegExp;
-  errorMessage: string;
-  onChange: (name: string, value: string) => void;
+  name: string
+  label: string
+  pattern: RegExp
+  errorMessage: string
+  onChange: (name: string, value: string) => void
 }
 
 function InputField({ name, label, pattern, errorMessage, onChange }: Props) {
-  const [value, setValue] = useState('');
-  const [error, setError] = useState('');
-  const [touched, setTouched] = useState(false);
+  const [value, setValue] = useState('')
+  const [error, setError] = useState('')
+  const [touched, setTouched] = useState(false)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setValue(value);
+    const value = event.target.value
+    setValue(value)
 
     if (!value) {
-      setError(`Please enter your ${label.toLowerCase()}`);
+      setError(`Please enter your ${label.toLowerCase()}`)
     } else if (!pattern.test(value)) {
-      setError(errorMessage);
+      setError(errorMessage)
     } else {
-      setError('');
+      setError('')
     }
 
-    onChange(name, value);
-  };
+    onChange(name, value)
+  }
 
   const handleBlur = () => {
-    setTouched(true);
-  };
+    setTouched(true)
+  }
 
   return (
     <div className="flex flex-col gap-3">
@@ -64,7 +64,7 @@ function InputField({ name, label, pattern, errorMessage, onChange }: Props) {
         </p>
       )}
     </div>
-  );
+  )
 }
 
-export default InputField;
+export default InputField
