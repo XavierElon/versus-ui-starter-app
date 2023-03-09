@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import { Fragment, useState } from 'react'
+import { FormEvent, Fragment, useState } from 'react'
 import { Switch } from '@headlessui/react'
 import { createNewsletterUser } from '@/api/newsletter.api'
 import { NewsletterUserData } from '@/models/interfaces'
@@ -9,17 +9,17 @@ import toast, { Toaster } from 'react-hot-toast'
 
 export const NewsletterCard = () => {
   const [enabled, setEnabled] = useState(false)
-  const [newsletterForm, setNewsletterForm] = useState<NewsletterUserData>({})
+  const [newsletterForm, setNewsletterForm] = useState<NewsletterUserData>()
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(true)
 
-  const handleNewletterSubmit = async (e: Event) => {
+  const handleNewletterSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setNewsletterForm({
       email: email,
       subscribed: subscribed
     })
-    const succeeded = await createNewsletterUser(newsletterForm)
+    const succeeded = await createNewsletterUser(newsletterForm!)
     if (succeeded) {
       toast.success('Succesfully subscribed')
     } else {
@@ -117,7 +117,7 @@ export const NewsletterCard = () => {
           <div className="w-col w-col-6">
             <div className="news-form w-form">
               <form
-                onSubmit={(e) => {
+                onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
                   handleNewletterSubmit(e)
                 }}
                 id="email-form"

@@ -3,3 +3,4 @@ aws ecr get-login-password --region us-west-2 | docker login --username AWS --pa
 docker build -t xsj-ui-starter-app .
 docker tag xsj-ui-starter-app:latest 275136276893.dkr.ecr.us-west-2.amazonaws.com/xsj-ui-starter-app:latest
 docker push 275136276893.dkr.ecr.us-west-2.amazonaws.com/xsj-ui-starter-app:latest
+aws ecs update-service --cluster xsj-ui-starter-app --service xsj-ui-starter-app-service --force-new-deployment --region us-west-2
