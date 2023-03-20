@@ -46,7 +46,7 @@ const SignUp: NextPage = () => {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log('hanlde submit called')
+    console.log('handle submit called')
     console.log('event -> ', event)
     console.log('event -> ', event.target)
     const firstName = (event.target as HTMLFormElement)['firstName'].value
