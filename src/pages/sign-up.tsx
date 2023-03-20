@@ -35,7 +35,7 @@ const SignUp: NextPage = () => {
   useEffect(() => {
     gapi.load('auth2', () => {
       gapi.auth2.init({
-        client_id: 'YOUR_GOOGLE_CLIENT_ID',
+        client_id: '301010684449-39sdfnftksl02it2mgohio19b92b0jrg.apps.googleusercontent.com',
       });
     });
   }, []);
