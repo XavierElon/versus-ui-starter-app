@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import React, { FormEvent, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { toast, Toaster } from 'react-hot-toast'
+import { gapi } from "gapi-script";
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -31,13 +32,21 @@ const SignUp: NextPage = () => {
     }
   }, [error])
 
+  useEffect(() => {
+    gapi.load('auth2', () => {
+      gapi.auth2.init({
+        client_id: '301010684449-39sdfnftksl02it2mgohio19b92b0jrg.apps.googleusercontent.com',
+      });
+    });
+  }, []);
+
   function handleInputChange(key: string, value: string) {
     setUserData((prevState) => ({ ...prevState, [key]: value }))
   }
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log('hanlde submit called')
+    console.log('handle submit called')
     console.log('event -> ', event)
     console.log('event -> ', event.target)
     const firstName = (event.target as HTMLFormElement)['firstName'].value
@@ -83,10 +92,24 @@ const SignUp: NextPage = () => {
     // submit formData to server or perform other actions
   }
 
+  const GoogleLoginButton: React.FC<{}> = () => {
+    const handleGoogleLogin = async () => {
+      try {
+        const auth = await gapi.auth2.getAuthInstance().signIn();
+        const idToken = auth.getAuthResponse().id_token;
+    
+        // Send the ID token to your backend server for verification and authentication
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  }
+
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
       <Header />
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
       <div className="bg-[url('/images/signup-cover.png')] bg-cover bg-center bg-no-repeat h-100%">
         <div className="flex-grow flex flex-col justify-center items-center gap-3">
           <h1 className="text-3xl mt-4 text-zinc-900 text-center font-semibold">
@@ -223,6 +246,7 @@ const SignUp: NextPage = () => {
                     <div className="custom-button-text">Login With Apple</div>
                   </Link>
                   <Link
+                    onClick={handleGoogleLogin}
                     href="/sign-up"
                     className="custom-button small white w-inline-block text-center"
                   >
