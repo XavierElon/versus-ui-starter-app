@@ -72,10 +72,10 @@
   resolved "https://registry.npmjs.org/@next/font/-/font-13.1.5.tgz"
   integrity sha512-6M5R6yC3JkdJiqo/YJxDp6+0vDn0smXOAzl8uHt4qmDS2u53ji/19K0HM51d+5kg8xntDi+N2hw7YjaU9inkNA==
 
-"@next/swc-darwin-arm64@13.1.5":
+"@next/swc-darwin-x64@13.1.5":
   version "13.1.5"
-  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.1.5.tgz"
-  integrity sha512-aeFXK+M/zmG/CNdMJ0tGNs0MWcLueUe7vZ2V6fa+2yz/ZgYJLI7fEfFvVh1p1yBMzupSbZDowvMuCSFTaeg3MA==
+  resolved "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-13.1.5.tgz"
+  integrity sha512-6mPX0GNRg8NzjV70at8I8pD9YBnPHDpxJCoMuIqysdTjtQhd09Xk6GUhquNhp1kEJzzVk7OW5l2ch4XIJjtY3A==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -465,6 +465,11 @@ client-only@^0.0.1, client-only@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz"
   integrity sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==
+
+coffee-script@*:
+  version "1.12.7"
+  resolved "https://registry.npmjs.org/coffee-script/-/coffee-script-1.12.7.tgz"
+  integrity sha512-fLeEhqwymYat/MpTPUjSKHVYYl0ec2mOyALEMLmzr5i1isuG+6jfI2j2d5oBO3VIzgUXgBVIcOT9uH1TFxBckw==
 
 color-convert@^2.0.1:
   version "2.0.1"
@@ -1082,6 +1087,13 @@ functions-have-names@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.3.tgz"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
+
+gapi@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/gapi/-/gapi-0.0.3.tgz"
+  integrity sha512-09nvJdQex78sxmMyOUnpr941fdWMJQjhFZi7vsW91zM3RYoCfkKU83UoJckn/GBEMmvYNZ4vL47eZ6lv/Bnavw==
+  dependencies:
+    coffee-script "*"
 
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.1, get-intrinsic@^1.1.3:
   version "1.2.0"
