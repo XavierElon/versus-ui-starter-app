@@ -236,9 +236,15 @@ const SignUp: NextPage = () => {
               <div className="flex flex-col gap-3 mt-5">
                 <p className="text-center text-zinc-400">
                   Already have an account?{' '}
-                  <a href="/login" className="text-red-600">
+                  {/* <a href="/login" className="text-red-600">
                     Login
-                  </a>
+                  </a> */}
+                  <Link
+                    href="/login"
+                    className="custom-button small white w-inline-block text-center"
+                  >
+                    Login
+                  </Link>
                 </p>
               </div>
             </div>

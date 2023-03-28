@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable @next/next/no-img-element */
+import { useContext } from 'react'
 import Header from '@/components/Header'
 import Seo from '@/components/Seo'
 import Footer from '@/components/Footer'
@@ -11,10 +12,12 @@ import { CompeteCard } from '@/components/Cards/CompeteCard'
 import { BorderedCard } from '@/components/Cards/BorderedCard'
 import { SlidesCard } from '@/components/Cards/SlidesCard'
 import { SeasonCard } from '@/components/Cards/SeasonCard'
+import { AppStateContext } from '@/context/AppStateProvider'
 
 const DashboardLayout = () => {
   const { form, subscribe, inputEl } = useSubscribe()
-
+  const { email } = useContext(AppStateContext)
+  console.log(email)
   return (
     <>
       <Seo
