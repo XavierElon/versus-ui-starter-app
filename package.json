@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "private": true,
   "scripts": {
-    "dev": "yarn run lint && next dev",
+    "dev": "yarn run lint && next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "test": "mocha",

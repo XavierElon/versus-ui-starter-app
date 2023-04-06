@@ -10,7 +10,7 @@ RUN yarn install
 
 
 COPY . .
-EXPOSE 3000
+EXPOSE 3001
 
 RUN npm install pm2 -g
 RUN npm run build

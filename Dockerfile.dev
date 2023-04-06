@@ -9,6 +9,6 @@ COPY package*.json ./
 RUN --mount=type=cache,target=/var/cache/yarn yarn config set cache-folder /var/cache/yarn && yarn install
 
 COPY . .
-EXPOSE 3000
+EXPOSE 3001
 
 CMD ["yarn", "run", "dev"]

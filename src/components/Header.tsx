@@ -63,6 +63,17 @@ export default function Header() {
                   <div className="custom-button-text">SIGN UP</div>
                 </Link>
               </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-20">
+                <Link
+                  href="/login"
+                  className="custom-button small white w-inline-block"
+                >
+                  <div className="custom-button-hover primary" />
+                  <div className="corner-black bottom-right small" />
+                  <div className="corner-black top-left small" />
+                  <div className="custom-button-text">LOG IN</div>
+                </Link>
+              </div>
             </div>
           </div>
           <Disclosure.Panel>
