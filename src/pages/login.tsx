@@ -39,6 +39,7 @@ const Login: NextPage = () => {
 
     if (succeeded === true) {
       toast.success('Successfully logged in')
+      router.push('/')
     } else if (succeeded === false) {
       toast.error('Login failed')
     } else {
